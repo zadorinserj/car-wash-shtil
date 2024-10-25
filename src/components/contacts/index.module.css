@@ -1,0 +1,141 @@
+.content {
+    padding-left: 115px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 140px;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+        grid-gap: 32px;
+        grid-template-columns: auto 1fr;
+    }
+
+    @media (max-width: 1140px) {
+        padding-left: 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 82px;
+        grid-gap: 68px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.description {
+    position: relative;
+}
+
+.descriptionVector {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 490px;
+    aspect-ratio: 1.6 / 1;
+
+    @media (max-width: 768px) {
+        height: 336px;
+        left: 0;
+        transform: translate(-150px, -40%);
+    }
+
+    & > img {
+        object-fit: contain;
+    }
+}
+
+.contacts {
+    margin-top: 32px;
+}
+
+.time {
+    margin: 16px 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hours {
+    position: relative;
+    padding-left: 24px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #19AA1E;
+        border: 4px solid #FFFFFF;
+        border-radius: 50%;
+    }
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    transition: color .3s ease;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: #9EE970;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.image {
+    position: relative;
+    width: 717px;
+    aspect-ratio: 1 / 1;
+
+    @media (max-width: 1440px) {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 354px;
+    }
+
+    & > img {
+        object-fit: contain;
+    }
+}
+
+.imageVector {
+    position: absolute;
+    z-index: -1;
+    top: -57px;
+    left: -73px;
+    height: 370px;
+    aspect-ratio: 1.6 / 1;
+
+    @media (max-width: 768px) {
+        top: -30px;
+        left: 0;
+        height: 180px;
+    }
+
+    & > img {
+        object-fit: contain;
+    }
+}

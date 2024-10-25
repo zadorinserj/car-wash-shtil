@@ -1,0 +1,152 @@
+.wrapper {
+    padding: 40px;
+    display: flex;
+    border: 2px solid #9EE970;
+    border-radius: 16px;
+    background-color: #ffffff;
+
+    @media (max-width: 768px) {
+        padding: 32px;
+        min-width: 327px;
+    }
+}
+
+.item {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    font-family: var(--font-hoves);
+}
+
+.itemHint {
+    opacity: .4;
+}
+
+.itemSelected {
+    opacity: 1;
+}
+
+.menu {
+    display: grid;
+    grid-gap: 80px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.menuSelected {
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.submenu {
+    position: relative;
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    &:nth-of-type(n + 2) {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -40px;
+            width: 1px;
+            height: 100%;
+            background-color: #9EE970;
+        }
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg);
+}
+
+.link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.topMenuSelected {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.backButton {
+    position: relative;
+    margin-bottom: 32px;
+    display: none;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    color: #000000;
+    background-color: transparent;
+    opacity: .4;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+}
+
+.backButtonIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+}
+
+.contactsItem {
+    margin-top: calc(64px - 12px);
+}
+
+.phoneLink {
+    position: relative;
+    width: fit-content;
+    display: none;
+    color: #000000;
+    text-decoration: none;
+    transition: color .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: #61A338;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+
+    & > p {
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: #9EE970;
+    }
+}

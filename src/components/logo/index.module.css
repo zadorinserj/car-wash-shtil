@@ -1,0 +1,16 @@
+.wrapper {
+    position: relative;
+    width: 136px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+        width: 116px;
+        height: 32px;
+    }
+
+    @media (max-width: 768px) {
+        width: 97px;
+    }
+}

@@ -1,0 +1,150 @@
+.header {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.content {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.menu {
+    margin-left: 56px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.link {
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    transition: color .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: #61A338;
+    }
+}
+
+.tooltip {
+    padding: 24px;
+    display: flex;
+    border: 2px solid #9EE970;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.menuContent {
+    margin-right: 24px;
+    padding: 8px 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 26px 50px;
+}
+
+.contacts {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 20px;
+    line-height: 1;
+
+    @media (max-width: 1440px) {
+        gap: 40px;
+    }
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: #9EE970;
+    }
+}
+
+.promoImage {
+    position: relative;
+    width: 170px;
+    aspect-ratio: 0.85 / 1;
+
+    & > img {
+        object-fit: contain;
+    }
+}
+
+.withIcon {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition-delay: .3s;
+}
+
+.withIconRotate {
+    .icon {
+        transform: rotate(180deg);
+        filter: brightness(0) saturate(100%) invert(52%) sepia(87%) saturate(338%) hue-rotate(53deg) brightness(90%) contrast(87%);
+    }
+}
+
+.icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease, filter .3s ease;
+}
+
+.desktop {
+    @media (max-width: 1440px) {
+        display: none;
+    }
+}
+
+.mobileMenuButton {
+    display: none;
+
+    @media (max-width: 1440px) {
+        display: block;
+    }
+}
+
+.mobileMenuPopover {
+    max-width: calc(100% - 40px - 40px);
+
+    @media (max-width: 768px) {
+        max-width: calc(100% - 24px - 24px);
+    }
+}

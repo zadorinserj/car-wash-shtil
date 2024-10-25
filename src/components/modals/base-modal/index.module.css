@@ -1,0 +1,62 @@
+.wrapper {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #000000;
+    opacity: .8;
+}
+
+.modal {
+    position: relative;
+    z-index: 1;
+    padding: 64px 32px 32px 32px;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+
+    @media (max-width: 1440px) {
+        padding: 56px 24px 24px 24px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: opacity .3s ease;
+
+    @media (max-width: 1440px) {
+        top: 16px;
+        right: 16px;
+    }
+
+    &:hover {
+        opacity: .6;
+    }
+
+    &:active {
+        opacity: .4;
+    }
+}

@@ -1,0 +1,118 @@
+.typography {
+    line-height: 1;
+}
+
+.default {
+    font-family: var(--font-hoves);
+}
+
+.expanded {
+    font-family: var(--font-hoves-expanded);
+}
+
+.h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 62px;
+
+    @media (max-width: 1440px) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+.h2 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 62px;
+
+    @media (max-width: 1440px) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+.h3.m {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 53px;
+
+    @media (max-width: 1440px) {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+        line-height: 31px;
+    }
+}
+
+.h3.s {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+
+    @media (max-width: 1440px) {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.p.m {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 45px;
+
+    @media (max-width: 1440px) {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.p.s {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @media (max-width: 1440px) {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+.p.xs {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}

@@ -1,0 +1,22 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.disabled {
+
+}
+
+.hidden {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
