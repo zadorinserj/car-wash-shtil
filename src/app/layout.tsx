@@ -24,6 +24,11 @@ export default function RootLayout({
 	return (
 		<Modals>
 			<html lang='en'>
+				<link
+					rel='icon'
+					href='./favicon.ico'
+					sizes='any'
+				/>
 				<body className={cn.body}>
 					<Header />
 					<main>{children}</main>
