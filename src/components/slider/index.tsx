@@ -21,8 +21,6 @@ export const Slider = ({ title }) => {
 	const [slideIndex, setSlideIndex] = useState(0)
 	const [sliderRef, setSliderRef] = useState(null)
 
-	console.log(sliderRef)
-
 	return (
 		<div>
 			<div className={cn.header}>
