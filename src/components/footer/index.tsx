@@ -11,6 +11,8 @@ import { Button } from '@/components/button'
 import { Logo } from '@/components/logo'
 import { Typography } from '@/components/typography'
 
+import { Pages } from '@/constants/pages'
+
 import cn from './index.module.css'
 
 export const Footer: FC = () => {
@@ -21,6 +23,7 @@ export const Footer: FC = () => {
 					<div className={cn.logo}>
 						<Logo color='white' />
 						<Button
+							href='https://vk.com/shtil18'
 							type='main'
 							icon={vkIcon}
 							hoverIcon={arrowTopRightWhiteIcon}
@@ -47,7 +50,7 @@ export const Footer: FC = () => {
 								</div>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_COMPLEX}
 								>
 									<Typography
 										tag='p'
@@ -58,7 +61,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_BOTTOM}
 								>
 									<Typography
 										tag='p'
@@ -69,7 +72,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_TRUCK}
 								>
 									<Typography
 										tag='p'
@@ -80,7 +83,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_THO_PHASE}
 								>
 									<Typography
 										tag='p'
@@ -91,7 +94,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_THREE_PHASE}
 								>
 									<Typography
 										tag='p'
@@ -102,7 +105,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_CARCASE}
 								>
 									<Typography
 										tag='p'
@@ -113,7 +116,7 @@ export const Footer: FC = () => {
 								</Link>
 								<Link
 									className={cn.sectionLink}
-									href='/'
+									href={Pages.CAR_WASH_SALON}
 								>
 									<Typography
 										tag='p'
@@ -135,7 +138,7 @@ export const Footer: FC = () => {
 									</div>
 									<Link
 										className={cn.sectionLink}
-										href='/'
+										href={Pages.CLEANERS_CARCASE}
 									>
 										<Typography
 											tag='p'
@@ -146,7 +149,7 @@ export const Footer: FC = () => {
 									</Link>
 									<Link
 										className={cn.sectionLink}
-										href='/'
+										href={Pages.CLEANERS_SALON}
 									>
 										<Typography
 											tag='p'
@@ -167,7 +170,7 @@ export const Footer: FC = () => {
 									</div>
 									<Link
 										className={cn.sectionLink}
-										href='/'
+										href={Pages.PROTECTION_CERAMICS}
 									>
 										<Typography
 											tag='p'
@@ -178,7 +181,7 @@ export const Footer: FC = () => {
 									</Link>
 									<Link
 										className={cn.sectionLink}
-										href='/'
+										href={Pages.PROTECTION_QUARTS}
 									>
 										<Typography
 											tag='p'
@@ -189,7 +192,7 @@ export const Footer: FC = () => {
 									</Link>
 									<Link
 										className={cn.sectionLink}
-										href='/'
+										href={Pages.PROTECTION_WAX}
 									>
 										<Typography
 											tag='p'
@@ -200,19 +203,19 @@ export const Footer: FC = () => {
 									</Link>
 								</div>
 							</div>
-							<div className={cn.section}>
-								<Link
-									href='/'
-									className={clsx(cn.sectionTitle, cn.sectionLink)}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Детейлинг
-									</Typography>
-								</Link>
-							</div>
+							{/*<div className={cn.section}>*/}
+							{/*	<Link*/}
+							{/*		href='/'*/}
+							{/*		className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
+							{/*	>*/}
+							{/*		<Typography*/}
+							{/*			tag='p'*/}
+							{/*			size='s'*/}
+							{/*		>*/}
+							{/*			Детейлинг*/}
+							{/*		</Typography>*/}
+							{/*	</Link>*/}
+							{/*</div>*/}
 							<div className={cn.section}>
 								<div className={clsx(cn.sectionTitle, cn.disabled)}>
 									<Typography
@@ -264,6 +267,7 @@ export const Footer: FC = () => {
 							</div>
 							<div className={cn.actions}>
 								<Button
+									href='https://yandex.ru/maps/-/CDdhiMkC'
 									icon={yandexIcon}
 									hoverIcon={arrowTopRightGreenIcon}
 									hoverColor='hoverGreen'
@@ -271,6 +275,7 @@ export const Footer: FC = () => {
 									В Яндекс
 								</Button>
 								<Button
+									href='https://go.2gis.com/ubwms'
 									icon={twoGisIcon}
 									hoverIcon={arrowTopRightGreenIcon}
 									hoverColor='hoverGreen'
@@ -284,7 +289,7 @@ export const Footer: FC = () => {
 								tag='p'
 								size='s'
 							>
-								Ижевск, ул. Пушкинская 268/1
+								Ижевск, ул. 8 марта, 16а, к. 2
 							</Typography>
 							<div className={cn.hoursWrapper}>
 								<div className={cn.hours}>
@@ -309,6 +314,7 @@ export const Footer: FC = () => {
 							</div>
 							<div className={cn.actions}>
 								<Button
+									href='https://yandex.ru/maps/-/CDdhmJmJ'
 									icon={yandexIcon}
 									hoverIcon={arrowTopRightGreenIcon}
 									hoverColor='hoverGreen'
@@ -316,6 +322,7 @@ export const Footer: FC = () => {
 									В Яндекс
 								</Button>
 								<Button
+									href='https://go.2gis.com/g19zwe'
 									icon={twoGisIcon}
 									hoverIcon={arrowTopRightGreenIcon}
 									hoverColor='hoverGreen'

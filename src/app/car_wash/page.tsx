@@ -10,7 +10,15 @@ import { QuickWrite } from '@/components/quick-write'
 import { ServiceCard } from '@/components/service-card'
 import { Typography } from '@/components/typography'
 
-import cn from './page.module.css'
+import { Pages } from '@/constants/pages'
+
+import cn from '../inner_page.module.css'
+
+export const metadata = {
+	title: 'Автомойка в Ижевске — цены и акции!',
+	description:
+		'Ищете недорогую мойку автомобиля в Ижевске? Мы предлагаем широкий спектр услуг по доступным ценам. '
+}
 
 export default function Services() {
 	return (
@@ -29,6 +37,7 @@ export default function Services() {
 					tag='от 1000 ₽'
 					image={carWashServices1Image}
 					mobileImage={carWashServicesMobile1Image}
+					url={Pages.CAR_WASH_CARCASE}
 				/>
 				<ServiceCard
 					title='Комплексная мойка'
@@ -36,6 +45,7 @@ export default function Services() {
 					tag='от 1000 ₽'
 					image={carWashServices2Image}
 					mobileImage={carWashServicesMobile2Image}
+					url={Pages.CAR_WASH_COMPLEX}
 				/>
 			</div>
 			<div className={cn.content}>
@@ -43,26 +53,31 @@ export default function Services() {
 					title='Двухфазная'
 					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
 					tag='от 1000 ₽'
+					url={Pages.CAR_WASH_THO_PHASE}
 				/>
 				<ServiceCard
 					title='Трехфазная'
 					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
 					tag='от 1000 ₽'
+					url={Pages.CAR_WASH_THREE_PHASE}
 				/>
 				<ServiceCard
 					title='Днище'
 					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
 					tag='от 1000 ₽'
+					url={Pages.CAR_WASH_BOTTOM}
 				/>
 				<ServiceCard
 					title='Салон'
 					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
 					tag='от 1000 ₽'
+					url={Pages.CAR_WASH_SALON}
 				/>
 				<ServiceCard
 					title='Грузовые авто'
 					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
 					tag='от 1000 ₽'
+					url={Pages.CAR_WASH_TRUCK}
 				/>
 			</div>
 			<div className={cn.section}>

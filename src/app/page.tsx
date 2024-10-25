@@ -19,6 +19,11 @@ export default function Home() {
 			<MainBlock
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
+				title={
+					<>
+						Комплексная <br /> мойка и детейлинг <br /> авто в Ижевске
+					</>
+				}
 			/>
 			<div className='container'>
 				<Services />

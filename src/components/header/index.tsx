@@ -12,7 +12,7 @@ import { Logo } from '@/components/logo'
 import { MenuButton } from '@/components/menu-button'
 import { Tooltip } from '@/components/tooltip'
 
-import { Pages } from '@/constants/pages'
+import { MENU, Pages } from '@/constants/pages'
 
 import cn from './index.module.css'
 
@@ -35,48 +35,17 @@ export const Header: FC = () => {
 						content={
 							<div className={cn.tooltip}>
 								<div className={cn.menuContent}>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Комплексная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Кузов
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Двухфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Салон
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Трехфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Днище
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Грузовые авто
-									</Link>
+									{MENU.find(({ text }) => text === 'Автомойка').submenu.map(
+										({ text, url }) => (
+											<Link
+												key={text}
+												href={url}
+												className={cn.link}
+											>
+												{text}
+											</Link>
+										)
+									)}
 								</div>
 								<div className={cn.promoImage}>
 									<Image
@@ -112,48 +81,17 @@ export const Header: FC = () => {
 						content={
 							<div className={cn.tooltip}>
 								<div className={cn.menuContent}>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Комплексная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Кузов
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Двухфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Салон
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Трехфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Днище
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Грузовые авто
-									</Link>
+									{MENU.find(({ text }) => text === 'Химчистка').submenu.map(
+										({ text, url }) => (
+											<Link
+												key={text}
+												href={url}
+												className={cn.link}
+											>
+												{text}
+											</Link>
+										)
+									)}
 								</div>
 								<div className={cn.promoImage}>
 									<Image
@@ -189,48 +127,17 @@ export const Header: FC = () => {
 						content={
 							<div className={cn.tooltip}>
 								<div className={cn.menuContent}>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Комплексная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Кузов
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Двухфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Салон
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Трехфазная
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Днище
-									</Link>
-									<Link
-										href='/'
-										className={cn.link}
-									>
-										Грузовые авто
-									</Link>
+									{MENU.find(
+										({ text }) => text === 'Защитные покрытия'
+									).submenu.map(({ text, url }) => (
+										<Link
+											key={text}
+											href={url}
+											className={cn.link}
+										>
+											{text}
+										</Link>
+									))}
 								</div>
 								<div className={cn.promoImage}>
 									<Image
@@ -264,12 +171,12 @@ export const Header: FC = () => {
 					>
 						Полировка
 					</Link>
-					<Link
-						href={Pages.DETAILING}
-						className={cn.link}
-					>
-						Детейлинг
-					</Link>
+					{/*<Link*/}
+					{/*	href={Pages.DETAILING}*/}
+					{/*	className={cn.link}*/}
+					{/*>*/}
+					{/*	Детейлинг*/}
+					{/*</Link>*/}
 				</nav>
 				<div className={cn.contacts}>
 					<Link

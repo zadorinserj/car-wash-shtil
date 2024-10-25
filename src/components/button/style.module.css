@@ -9,6 +9,7 @@
     font-weight: 500;
     line-height: 1;
     color: #000000;
+    text-decoration: none;
     border-radius: 50px;
     transition: box-shadow .3s ease;
 }

@@ -55,6 +55,7 @@
 .menuContent {
     margin-right: 24px;
     padding: 8px 6px;
+    height: max-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 26px 50px;

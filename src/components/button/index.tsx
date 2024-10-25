@@ -1,11 +1,13 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FC, ReactNode } from 'react'
 
 import cn from './style.module.css'
 
 export const Button: FC<{
 	className?: string
+	href?: string
 	type?: 'main' | 'secondary'
 	color?: 'white' | 'green' | 'black' | 'grey'
 	size?: 'l' | 'm' | 's'
@@ -18,6 +20,7 @@ export const Button: FC<{
 	children?: ReactNode
 }> = ({
 	className,
+	href = undefined,
 	type = 'secondary',
 	color = 'white',
 	size = 'l',
@@ -29,8 +32,10 @@ export const Button: FC<{
 	block = false,
 	onClick
 }) => {
+	const Tag = href === undefined ? 'button' : Link
+
 	return (
-		<button
+		<Tag
 			className={clsx(
 				cn.button,
 				cn[size],
@@ -42,6 +47,8 @@ export const Button: FC<{
 				children !== null && cn.withText,
 				className
 			)}
+			href={href}
+			target='_blank'
 			onClick={onClick}
 		>
 			{children && <span className={cn.text}>{children}</span>}
@@ -61,6 +68,6 @@ export const Button: FC<{
 					</div>
 				</div>
 			)}
-		</button>
+		</Tag>
 	)
 }

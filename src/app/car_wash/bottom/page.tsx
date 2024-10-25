@@ -10,7 +10,13 @@ import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
-import cn from '../page.module.css'
+import cn from '../../inner_page.module.css'
+
+export const metadata = {
+	title: 'Мойка днища авто 🚘 — профессиональная чистка в Ижевске!',
+	description:
+		'Профессиональная мойка днища автомобиля 🚗 в Ижевске! Используем эффективные методы и оборудование, чтобы ваш автомобиль был чистым и безопасным!'
+}
 
 export default function Carcase() {
 	return (
@@ -19,6 +25,11 @@ export default function Carcase() {
 				className={cn.mainBlock}
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
+				title={
+					<>
+						Мойка днища авто <br /> профессиональная <br /> чистка в Ижевске!
+					</>
+				}
 			/>
 			<div className='container'>
 				<div className={cn.section}>

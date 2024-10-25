@@ -15,7 +15,8 @@ export const ServiceCard: FC<{
 	title: string
 	paragraph: string
 	tag: string
-}> = ({ image, mobileImage, title, paragraph, tag }) => {
+	url: any
+}> = ({ image, url, mobileImage, title, paragraph, tag }) => {
 	return (
 		<div className={clsx(cn.wrapper, image && cn.withImage)}>
 			<div className={cn.content}>
@@ -35,6 +36,7 @@ export const ServiceCard: FC<{
 				</Typography>
 				<div className={cn.actions}>
 					<Button
+						href={url}
 						type='main'
 						color='green'
 						icon={arrowRightWhiteIcon}

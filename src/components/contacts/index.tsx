@@ -55,6 +55,7 @@ export const Contacts: FC = () => {
 						</div>
 						<div className={cn.actions}>
 							<Button
+								href='https://yandex.ru/maps/-/CDdhiMkC'
 								color='black'
 								type='secondary'
 								hoverColor='hoverGreen'
@@ -64,6 +65,7 @@ export const Contacts: FC = () => {
 								В Яндекс
 							</Button>
 							<Button
+								href='https://go.2gis.com/ubwms'
 								color='black'
 								type='secondary'
 								hoverColor='hoverGreen'

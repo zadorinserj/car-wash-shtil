@@ -5,7 +5,7 @@ import yandexIcon from '@public/icons/yandex-icon.svg'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
@@ -16,7 +16,8 @@ export const MainBlock: FC<{
 	className?: string
 	image: any
 	mobileImage: any
-}> = ({ className, image, mobileImage }) => {
+	title: ReactNode
+}> = ({ className, image, mobileImage, title }) => {
 	return (
 		<section className={clsx(cn.main, className)}>
 			<div className='container'>
@@ -25,7 +26,7 @@ export const MainBlock: FC<{
 					tag='h1'
 					font='expanded'
 				>
-					Комплексная <br /> мойка и детейлинг <br /> авто в Ижевске
+					{title}
 				</Typography>
 				<Button
 					type='main'
@@ -62,6 +63,7 @@ export const MainBlock: FC<{
 					</div>
 					<div className={cn.actions}>
 						<Button
+							href='https://yandex.ru/maps/-/CDdhiMkC'
 							type='secondary'
 							icon={yandexIcon}
 							hoverIcon={arrowTopRightGreenIcon}
@@ -69,6 +71,7 @@ export const MainBlock: FC<{
 							В Яндекс
 						</Button>
 						<Button
+							href='https://go.2gis.com/ubwms'
 							type='secondary'
 							icon={twoGisIcon}
 							hoverIcon={arrowTopRightGreenIcon}

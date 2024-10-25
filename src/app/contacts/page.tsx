@@ -16,6 +16,12 @@ import { Typography } from '@/components/typography'
 
 import cn from './page.module.css'
 
+export const metadata = {
+	title: 'Автомойка рядом 🚘 — круглосуточная мойка в Ижевске',
+	description:
+		'Ищете, где помыть машину в Ижевске? Мы работаем круглосуточно! 🚗 Рядом с вами на карте.'
+}
+
 export default function Contacts() {
 	return (
 		<div className={clsx(cn.page, 'container')}>
@@ -71,6 +77,7 @@ export default function Contacts() {
 						</div>
 						<div className={cn.actions}>
 							<Button
+								href='https://yandex.ru/maps/-/CDdhiMkC'
 								color='grey'
 								type='secondary'
 								icon={yandexIcon}
@@ -80,6 +87,7 @@ export default function Contacts() {
 								В Яндекс
 							</Button>
 							<Button
+								href='https://go.2gis.com/ubwms'
 								color='grey'
 								type='secondary'
 								icon={twoGisIcon}
@@ -151,6 +159,7 @@ export default function Contacts() {
 						Публикуем новости, акции, расписание и новинки
 					</Typography>
 					<Button
+						href='https://vk.com/shtil18'
 						type='main'
 						color='green'
 						icon={vkBlueIcon}
