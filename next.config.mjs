@@ -10,11 +10,11 @@ export default (phase) => {
             unoptimized: true
         },
         distDir: 'dist',
-        output: 'export',
+        // output: 'export',
     }
 
     if (production) {
-        nextConfig.assetPrefix = './';
+        // nextConfig.assetPrefix = './';
     }
 
     return nextConfig
