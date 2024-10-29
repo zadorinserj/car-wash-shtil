@@ -9,7 +9,7 @@ export default (phase) => {
         images: {
             unoptimized: true
         },
-        distDir: 'dist',
+        // distDir: 'dist',
         // output: 'export',
     }
 
