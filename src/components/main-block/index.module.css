@@ -18,9 +18,9 @@
 
 .bg {
     position: absolute;
-    top: -80px;
-    right: 40px;
-    height: calc(100% + 80px + 40px);
+    top: calc(0px - 84px - 80px);
+    right: -200px;
+    height: 933px;
     aspect-ratio: 1 / 1;
 
     @media (max-width: 1440px) {

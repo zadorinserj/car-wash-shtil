@@ -12,7 +12,6 @@ import { Services } from '@/components/services'
 import cn from './page.module.css'
 
 // TODO Добавить картинки в Advantages
-// Прописать мета информацию
 export default function Home() {
 	return (
 		<div className={cn.page}>

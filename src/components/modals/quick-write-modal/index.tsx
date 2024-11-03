@@ -2,23 +2,70 @@
 
 import arrowRightBlackIcon from '@public/icons/arrow-right-black-icon.svg'
 import arrowRightWhiteIcon from '@public/icons/arrow-right-white-icon.svg'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import { Button } from '@/components/button'
 import { Checkbox } from '@/components/fields/checkbox'
 import { Input } from '@/components/fields/input'
+import { MaskedInput } from '@/components/fields/masked-input'
+import { ModalTypes } from '@/components/modals'
 import { BaseModal } from '@/components/modals/base-modal'
 import { Typography } from '@/components/typography'
 
+import { useForm } from '@/hooks/use-form'
+
+import { nameNormalizer } from '@/utils/normalizers/name-normalizer'
+import { checkEmailForCyrillic } from '@/utils/validators/check-email-for-cyrillic'
+import { emailValidator } from '@/utils/validators/email-validator'
+import { phoneValidator } from '@/utils/validators/phone'
+import { requiredValidator } from '@/utils/validators/required'
+
 import cn from './index.module.css'
+import { useModal } from '@/context/modal-context'
+
+const PHONE_MASK = [
+	'+',
+	'7',
+	' ',
+	/([0-6]|[8-9])/,
+	/\d/,
+	/\d/,
+	' ',
+	/\d/,
+	/\d/,
+	/\d/,
+	' ',
+	/\d/,
+	/\d/,
+	' ',
+	/\d/,
+	/\d/
+]
 
 export const QuickWriteModal: FC<{ open: boolean; onClose: () => void }> = ({
 	onClose
 }) => {
-	const [fullName, changeFullName] = useState<string>('')
-	const [phone, changePhone] = useState<string>('')
-	const [email, changeEmail] = useState<string>('')
-	const [sopd, changeSopd] = useState<boolean>(true)
+	const { showModal, hideModal } = useModal()
+
+	const { fields, change, blur, submit } = useForm({
+		initial: { name: '', phone: '', email: '', sopd: true },
+		validators: {
+			name: [requiredValidator],
+			phone: [requiredValidator, phoneValidator()],
+			email: [requiredValidator, checkEmailForCyrillic, emailValidator()],
+			sopd: [requiredValidator]
+		},
+		normalizers: { name: [nameNormalizer] }
+	})
+
+	const handleSubmit = () => {
+		const valid = submit()
+
+		if (valid) {
+			hideModal()
+			showModal(ModalTypes.COMPLETE)
+		}
+	}
 
 	return (
 		<BaseModal
@@ -44,22 +91,29 @@ export const QuickWriteModal: FC<{ open: boolean; onClose: () => void }> = ({
 					name='fullName'
 					size='l'
 					placeholder='ФИО'
-					value={fullName}
-					onChange={changeFullName}
+					value={fields.values.name}
+					error={fields.errors.name}
+					onChange={value => change('name', value)}
+					onBlur={value => blur('name', value)}
 				/>
-				<Input
+				<MaskedInput
 					name='phone'
 					size='l'
 					placeholder='Номер телефона'
-					value={phone}
-					onChange={changePhone}
+					mask={PHONE_MASK}
+					value={fields.values.phone}
+					error={fields.errors.phone}
+					onChange={value => change('phone', value)}
+					onBlur={value => blur('phone', value)}
 				/>
 				<Input
 					name='email'
 					size='l'
 					placeholder='E-mail'
-					value={email}
-					onChange={changeEmail}
+					value={fields.values.email}
+					error={fields.errors.email}
+					onChange={value => change('email', value)}
+					onBlur={value => blur('email', value)}
 				/>
 			</div>
 			<Button
@@ -71,14 +125,16 @@ export const QuickWriteModal: FC<{ open: boolean; onClose: () => void }> = ({
 				hoverIcon={arrowRightBlackIcon}
 				hoverColor='hoverBlack'
 				animationDirection='left'
+				onClick={handleSubmit}
 			>
 				Отправить заявку
 			</Button>
 			<Checkbox
 				name='sopd'
 				label='Согласие с политикой конфиденциальности и обработкой персональных данных'
-				selected={sopd}
-				onChange={changeSopd}
+				selected={fields.values.sopd}
+				error={fields.errors.sopd}
+				onChange={value => blur('sopd', value)}
 			/>
 		</BaseModal>
 	)

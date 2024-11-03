@@ -14,30 +14,42 @@ export const Checkbox: FC<{
 	label?: string
 	disabled?: boolean
 	selected?: boolean
+	error?: string
 	onChange?: (selected: boolean) => void
-}> = ({ className, name, label, disabled = false, selected, onChange }) => {
+}> = ({
+	className,
+	name,
+	label,
+	disabled = false,
+	selected,
+	error,
+	onChange
+}) => {
 	return (
 		<label className={clsx(cn.wrapper, disabled && cn.disabled, className)}>
-			<input
-				className={cn.hidden}
-				name={name}
-				type='checkbox'
-				disabled={disabled}
-				checked={selected}
-				onChange={() => onChange?.(!selected)}
-			/>
-			<div className={cn.checkbox}>
-				<Image
-					src={selected ? checkboxCheckedIcon : checkboxEmptyIcon}
-					alt=''
+			<div className={cn.field}>
+				<input
+					className={cn.hidden}
+					name={name}
+					type='checkbox'
+					disabled={disabled}
+					checked={selected}
+					onChange={() => onChange?.(!selected)}
 				/>
+				<div className={cn.checkbox}>
+					<Image
+						src={selected ? checkboxCheckedIcon : checkboxEmptyIcon}
+						alt=''
+					/>
+				</div>
+				<Typography
+					tag='p'
+					size='xs'
+				>
+					{label}
+				</Typography>
 			</div>
-			<Typography
-				tag='p'
-				size='xs'
-			>
-				{label}
-			</Typography>
+			{error && <div className={cn.error}>{error}</div>}
 		</label>
 	)
 }

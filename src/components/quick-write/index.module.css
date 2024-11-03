@@ -65,14 +65,15 @@
 
 .bg {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    height: 490px;
+    height: 538px;
+    transform: translate(60px, -50%);
     aspect-ratio: 1 / .67;
 
     @media (max-width: 1140px) {
         top: auto;
-        bottom: 0;
+        bottom: -60px;
         left: 50%;
         transform: translate(-50%, 0);
         height: 430px;

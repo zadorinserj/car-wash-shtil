@@ -1,8 +1,11 @@
 .wrapper {
+    cursor: pointer;
+}
+
+.field {
     position: relative;
     display: flex;
     gap: 16px;
-    cursor: pointer;
 }
 
 .disabled {
@@ -19,4 +22,9 @@
     position: relative;
     width: 24px;
     height: 24px;
+}
+
+.error {
+    margin-top: 4px;
+    color: #F17D7D;
 }

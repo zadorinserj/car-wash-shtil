@@ -2,16 +2,19 @@
 
 import React, { PropsWithChildren, useCallback, useMemo, useState } from 'react'
 
+import { CompleteModal } from '@/components/modals/complete-modal'
 import { QuickWriteModal } from '@/components/modals/quick-write-modal'
 
 import { ModalContext } from '@/context/modal-context'
 
 export enum ModalTypes {
-	QUICK_WRITE = 'QUICK_WRITE'
+	QUICK_WRITE = 'QUICK_WRITE',
+	COMPLETE = 'COMPLETE'
 }
 
 const MODAL_COMPONENTS = {
-	[ModalTypes.QUICK_WRITE]: QuickWriteModal
+	[ModalTypes.QUICK_WRITE]: QuickWriteModal,
+	[ModalTypes.COMPLETE]: CompleteModal
 }
 
 type TModalStore = {

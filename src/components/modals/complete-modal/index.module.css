@@ -1,0 +1,26 @@
+.modal {
+    max-width: 500px;
+
+    @media (max-width: 1440px) {
+        max-width: 450px;
+    }
+}
+
+.image {
+    position: relative;
+    margin-bottom: 32px;
+    width: 100%;
+    aspect-ratio: 1 / 0.6;
+}
+
+.title {
+    margin-bottom: 16px;
+}
+
+.paragraph {
+    margin-bottom: 32px;
+
+    @media (max-width: 1440px) {
+        margin-bottom: 24px;
+    }
+}
