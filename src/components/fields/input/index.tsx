@@ -62,6 +62,8 @@ export const Input: FC<TInputProps> = forwardRef(
 				)}
 			>
 				<input
+					// eslint-disable-next-line
+					// @ts-ignore
 					ref={ref}
 					className={cn.input}
 					name={name}

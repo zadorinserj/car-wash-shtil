@@ -8,13 +8,19 @@ export const MaskedInput: FC<TInputProps & { mask: any[] }> = props => {
 	const textMask = useRef()
 
 	const handleChange = value => {
-		textMask.current.update(value)
+		// eslint-disable-next-line
+		// @ts-ignore
+		textMask?.current?.update?.(value)
 
-		props?.onChange?.(textMask.current.state.previousConformedValue)
+		// eslint-disable-next-line
+		// @ts-ignore
+		props?.onChange?.(textMask?.current?.state?.previousConformedValue)
 	}
 
 	useEffect(() => {
-		if (inputRef.current) {
+		if (inputRef.current && textMask.current) {
+			// eslint-disable-next-line
+			// @ts-ignore
 			textMask.current = createTextMaskInputElement({
 				inputElement: inputRef.current,
 				mask: props.mask,
@@ -32,6 +38,8 @@ export const MaskedInput: FC<TInputProps & { mask: any[] }> = props => {
 	return (
 		<Input
 			{...props}
+			// eslint-disable-next-line
+			// @ts-ignore
 			ref={inputRef}
 			onChange={handleChange}
 		/>

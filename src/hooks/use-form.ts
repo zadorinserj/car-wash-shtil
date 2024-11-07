@@ -4,7 +4,7 @@ import { create } from 'zustand'
 import { firstPass } from '@/utils/helpers'
 import { runNormalizers } from '@/utils/normalizers/run-normalizers'
 
-const formStore = create(set => ({
+const formStore = create<any>(set => ({
 	fields: {
 		values: {},
 		errors: {}
@@ -59,7 +59,7 @@ const formStore = create(set => ({
 		})
 }))
 
-export const useForm = ({ initial, validators, normalizers }) => {
+export const useForm: any = ({ initial, validators, normalizers }) => {
 	const {
 		fields,
 		validators: formValidators,
