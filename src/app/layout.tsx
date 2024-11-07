@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 		siteName: 'Автомойка "Штиль" — чистота вашего авто в Ижевске! ✨',
 		images: [
 			{
-				url: '/',
-				width: 800,
-				height: 600
+				url: 'https://cy79364.tw1.ru/opengraph-image-1.webp',
+				width: 1200,
+				height: 630
 			}
 		]
 	}
