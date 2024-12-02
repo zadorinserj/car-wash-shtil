@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # Копируем весь код в контейнер
-#COPY . .
+COPY . .
 
 #RUN npm install
 
