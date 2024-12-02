@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # 2. Устанавливаем рабочую директорию внутри контейнера
-WORKDIR /app/car-wash-shtil
+WORKDIR /usr/src/app
 
 COPY . .
 
