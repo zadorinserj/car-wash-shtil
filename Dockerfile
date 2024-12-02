@@ -7,9 +7,9 @@ WORKDIR /usr/src/app
 # Копируем весь код в контейнер
 COPY . .
 
-RUN npm install
+#RUN npm install
 
-RUN npm run build
+#RUN npm run build
 
 EXPOSE 3000
 
