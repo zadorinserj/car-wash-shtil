@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # 2. Устанавливаем рабочую директорию внутри контейнера
-WORKDIR /
+WORKDIR .
 
 COPY . .
 
