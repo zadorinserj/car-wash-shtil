@@ -7,6 +7,10 @@ WORKDIR /usr/src/app
 # Копируем весь код в контейнер
 COPY . .
 
+RUN yarn install
+
+RUN yarn build
+
 EXPOSE 3000
 
 # Команда для запуска приложения
