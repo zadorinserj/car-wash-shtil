@@ -9,6 +9,7 @@ export default (phase) => {
         images: {
             unoptimized: true
         },
+        distDir: 'build'
     }
 
     if (production) {
