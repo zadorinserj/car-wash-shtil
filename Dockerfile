@@ -13,4 +13,4 @@ RUN npm run build
 EXPOSE 3000
 
 # 8. Устанавливаем команду для запуска приложения
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
