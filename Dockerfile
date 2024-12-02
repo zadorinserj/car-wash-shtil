@@ -7,9 +7,9 @@ WORKDIR /usr/src/app
 # Копируем весь код в контейнер
 COPY . .
 
-RUN yarn install
+RUN npm install
 
-RUN yarn build
+RUN npm build
 
 EXPOSE 3000
 
