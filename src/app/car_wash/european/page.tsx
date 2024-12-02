@@ -10,12 +10,12 @@ import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
-import cn from '../inner_page.module.css'
+import cn from '../../inner_page.module.css'
 
 export const metadata = {
-	title: 'Блеск и защита вашего авто — полировка кузова',
+	title: 'Европейская автомобиля в Ижевске – быстро, чисто, выгодно!',
 	description:
-		'Профессиональная полировка кузова вернёт вашему автомобилю блеск и защитит от повреждений. Закажите услугу прямо сейчас!'
+		'Европейская мойка в Ижевске по доступным ценам. Гарантия качества! '
 }
 
 export default function Carcase() {
@@ -25,17 +25,30 @@ export default function Carcase() {
 				className={cn.mainBlock}
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
-				title={<>Полировка кузова</>}
+				title={<>Европейская мойка</>}
 			/>
 			<div className='container'>
 				<div className={cn.section}>
 					<ServiceCompound
 						main={[
+							{ name: 'Евро экспресс', price: 500, description: '' },
 							{
-								name: 'Полировка',
-								price: 3800,
+								name: 'Евромойка',
+								price: 600,
 								description:
-									'Фирменная мойка кузова с располировкой Твердого воска (2-х фазная мойка кузова с применением кисточки, для промывки труднодоступных мест, чистка от: битума, метал. вкраплений, липы, чернение резины премиум, наружного  пластика)'
+									'2-х фазная мойка кузова и дисков губкой с полирущющим шампунем, коврики и пороги, продуем и высушим спец. полотенцем'
+							},
+							{
+								name: 'Еврокомплекс',
+								price: 1390,
+								description:
+									'2-х фазная мойка кузова и дисков губкой с полирущющим шампунем, сухая уборка салона, влажная уборка, чистка педалей. Сушка кузова спец. полотенцем'
+							},
+							{
+								name: 'Европейская нано-мойка',
+								price: 1210,
+								description:
+									'3-х фазная мойка, с полирующим консервантом  бережная сушка турбосушкой'
 							}
 						]}
 					/>

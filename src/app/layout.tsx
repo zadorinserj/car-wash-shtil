@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Metadata, Viewport } from 'next'
 import { ReactNode } from 'react'
 import 'slick-carousel/slick/slick.css'
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
 		title: 'Автомойка "Штиль" — чистота вашего авто в Ижевске! ✨',
 		description:
 			'Профессиональная мойка машин в Ижевске. Бережно очищаем от загрязнений, сохраняем покрытие. Запишитесь онлайн или по телефону! 🚗🔄',
-		url: 'https://moishtil.ru',
+		url: 'https://moishtil18.ru',
 		siteName: 'Автомойка "Штиль" — чистота вашего авто в Ижевске! ✨',
 		images: [
 			{
-				url: 'https://cy79364.tw1.ru/opengraph-image-1.webp',
+				url: 'https://moishtil18.ru/opengraph-image-1.webp',
 				width: 1200,
 				height: 630
 			}
@@ -44,6 +45,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			<GoogleTagManager gtmId='GTM-KWZ8W5JL' />
 			<link
 				rel='icon'
 				href='/favicon.ico'

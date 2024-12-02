@@ -11,7 +11,7 @@ import { Button } from '@/components/button'
 import { Logo } from '@/components/logo'
 import { Typography } from '@/components/typography'
 
-import { Pages } from '@/constants/pages'
+import { MENU, Pages } from '@/constants/pages'
 
 import cn from './index.module.css'
 
@@ -48,159 +48,131 @@ export const Footer: FC = () => {
 										Автомойка
 									</Typography>
 								</div>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_COMPLEX}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Комплексная
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_BOTTOM}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Днище
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_TRUCK}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Грузовые авто
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_THO_PHASE}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Двухфазная
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_THREE_PHASE}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Трехфазная
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_CARCASE}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Кузов
-									</Typography>
-								</Link>
-								<Link
-									className={cn.sectionLink}
-									href={Pages.CAR_WASH_SALON}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Салон
-									</Typography>
-								</Link>
+								{MENU.find(({ text }) => text === 'Автомойка')?.submenu?.map(
+									({ text, url }) => (
+										<Link
+											key={text}
+											className={cn.sectionLink}
+											href={url}
+										>
+											<Typography
+												tag='p'
+												size='s'
+											>
+												{text}
+											</Typography>
+										</Link>
+									)
+								)}
 							</div>
 							<div className={cn.subSection}>
+								{/*<div className={cn.section}>*/}
+								{/*	<div className={cn.sectionTitle}>*/}
+								{/*		<Typography*/}
+								{/*			tag='p'*/}
+								{/*			size='s'*/}
+								{/*		>*/}
+								{/*			Химчистка*/}
+								{/*		</Typography>*/}
+								{/*	</div>*/}
+								{/*	<Link*/}
+								{/*		className={cn.sectionLink}*/}
+								{/*		href={Pages.CLEANERS_CARCASE}*/}
+								{/*	>*/}
+								{/*		<Typography*/}
+								{/*			tag='p'*/}
+								{/*			size='s'*/}
+								{/*		>*/}
+								{/*			Кузов*/}
+								{/*		</Typography>*/}
+								{/*	</Link>*/}
+								{/*	<Link*/}
+								{/*		className={cn.sectionLink}*/}
+								{/*		href={Pages.CLEANERS_SALON}*/}
+								{/*	>*/}
+								{/*		<Typography*/}
+								{/*			tag='p'*/}
+								{/*			size='s'*/}
+								{/*		>*/}
+								{/*			Салон*/}
+								{/*		</Typography>*/}
+								{/*	</Link>*/}
+								{/*</div>*/}
 								<div className={cn.section}>
-									<div className={cn.sectionTitle}>
+									{/*<div className={cn.sectionTitle}>*/}
+									{/*	<Typography*/}
+									{/*		tag='p'*/}
+									{/*		size='s'*/}
+									{/*	>*/}
+									{/*		Полировка*/}
+									{/*	</Typography>*/}
+									{/*</div>*/}
+									<Link
+										className={clsx(cn.sectionTitle, cn.sectionLink)}
+										href={Pages.CLEANERS}
+									>
 										<Typography
 											tag='p'
 											size='s'
 										>
 											Химчистка
 										</Typography>
-									</div>
+									</Link>
 									<Link
-										className={cn.sectionLink}
-										href={Pages.CLEANERS_CARCASE}
+										className={clsx(cn.sectionTitle, cn.sectionLink)}
+										href={Pages.POLISHING}
 									>
 										<Typography
 											tag='p'
 											size='s'
 										>
-											Кузов
+											Полировка
 										</Typography>
 									</Link>
 									<Link
-										className={cn.sectionLink}
-										href={Pages.CLEANERS_SALON}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Салон
-										</Typography>
-									</Link>
-								</div>
-								<div className={cn.section}>
-									<div className={cn.sectionTitle}>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Защитное покрытие
-										</Typography>
-									</div>
-									<Link
-										className={cn.sectionLink}
+										className={clsx(cn.sectionTitle, cn.sectionLink)}
 										href={Pages.PROTECTION_CERAMICS}
 									>
 										<Typography
 											tag='p'
 											size='s'
 										>
-											Керамика
+											Керамопокрытие GYEON
 										</Typography>
 									</Link>
 									<Link
-										className={cn.sectionLink}
-										href={Pages.PROTECTION_QUARTS}
+										className={clsx(cn.sectionTitle, cn.sectionLink)}
+										href={Pages.POLISHING}
 									>
 										<Typography
 											tag='p'
 											size='s'
 										>
-											Кварц
+											Твердый воск
 										</Typography>
 									</Link>
-									<Link
-										className={cn.sectionLink}
-										href={Pages.PROTECTION_WAX}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Воск
-										</Typography>
-									</Link>
+									{/*<Link*/}
+									{/*	className={cn.sectionLink}*/}
+									{/*	href={Pages.PROTECTION_QUARTS}*/}
+									{/*>*/}
+									{/*	<Typography*/}
+									{/*		tag='p'*/}
+									{/*		size='s'*/}
+									{/*	>*/}
+									{/*		Кварц*/}
+									{/*	</Typography>*/}
+									{/*</Link>*/}
+									{/*<Link*/}
+									{/*	className={cn.sectionLink}*/}
+									{/*	href={Pages.PROTECTION_WAX}*/}
+									{/*>*/}
+									{/*	<Typography*/}
+									{/*		tag='p'*/}
+									{/*		size='s'*/}
+									{/*	>*/}
+									{/*		Воск*/}
+									{/*	</Typography>*/}
+									{/*</Link>*/}
 								</div>
 							</div>
 							{/*<div className={cn.section}>*/}
@@ -284,53 +256,53 @@ export const Footer: FC = () => {
 								</Button>
 							</div>
 						</div>
-						<div className={cn.address}>
-							<Typography
-								tag='p'
-								size='s'
-							>
-								Ижевск, ул. 8 марта, 16а, к. 2
-							</Typography>
-							<div className={cn.hoursWrapper}>
-								<div className={cn.hours}>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										24/7
-									</Typography>
-								</div>
-								<Link
-									href='tel:+73412911119'
-									className={cn.phone}
-								>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										+7 (3412) 91-11-19
-									</Typography>
-								</Link>
-							</div>
-							<div className={cn.actions}>
-								<Button
-									href='https://yandex.ru/maps/-/CDdhmJmJ'
-									icon={yandexIcon}
-									hoverIcon={arrowTopRightGreenIcon}
-									hoverColor='hoverGreen'
-								>
-									В Яндекс
-								</Button>
-								<Button
-									href='https://go.2gis.com/g19zwe'
-									icon={twoGisIcon}
-									hoverIcon={arrowTopRightGreenIcon}
-									hoverColor='hoverGreen'
-								>
-									В 2gis
-								</Button>
-							</div>
-						</div>
+						{/*<div className={cn.address}>*/}
+						{/*	<Typography*/}
+						{/*		tag='p'*/}
+						{/*		size='s'*/}
+						{/*	>*/}
+						{/*		Ижевск, ул. 8 марта, 16а, к. 2*/}
+						{/*	</Typography>*/}
+						{/*	<div className={cn.hoursWrapper}>*/}
+						{/*		<div className={cn.hours}>*/}
+						{/*			<Typography*/}
+						{/*				tag='p'*/}
+						{/*				size='s'*/}
+						{/*			>*/}
+						{/*				24/7*/}
+						{/*			</Typography>*/}
+						{/*		</div>*/}
+						{/*		<Link*/}
+						{/*			href='tel:+73412911119'*/}
+						{/*			className={cn.phone}*/}
+						{/*		>*/}
+						{/*			<Typography*/}
+						{/*				tag='p'*/}
+						{/*				size='s'*/}
+						{/*			>*/}
+						{/*				+7 (3412) 91-11-19*/}
+						{/*			</Typography>*/}
+						{/*		</Link>*/}
+						{/*	</div>*/}
+						{/*	<div className={cn.actions}>*/}
+						{/*		<Button*/}
+						{/*			href='https://yandex.ru/maps/-/CDdhmJmJ'*/}
+						{/*			icon={yandexIcon}*/}
+						{/*			hoverIcon={arrowTopRightGreenIcon}*/}
+						{/*			hoverColor='hoverGreen'*/}
+						{/*		>*/}
+						{/*			В Яндекс*/}
+						{/*		</Button>*/}
+						{/*		<Button*/}
+						{/*			href='https://go.2gis.com/g19zwe'*/}
+						{/*			icon={twoGisIcon}*/}
+						{/*			hoverIcon={arrowTopRightGreenIcon}*/}
+						{/*			hoverColor='hoverGreen'*/}
+						{/*		>*/}
+						{/*			В 2gis*/}
+						{/*		</Button>*/}
+						{/*	</div>*/}
+						{/*</div>*/}
 					</div>
 				</section>
 				<section className={cn.basement}>
@@ -355,7 +327,8 @@ export const Footer: FC = () => {
 					</Link>
 					<Link
 						className={cn.fileLink}
-						href='/'
+						href='https://moishtil18.ru//docs/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%A8%D1%82%D0%B8%D0%BB%D1%8C.pdf'
+						target='_blank'
 					>
 						<Typography
 							tag='p'
@@ -372,7 +345,8 @@ export const Footer: FC = () => {
 							Design by&nbsp;
 							<Link
 								className={cn.mentionLink}
-								href='/'
+								href='https://www.obradesign.ru/'
+								target='_blank'
 							>
 								Obra
 							</Link>

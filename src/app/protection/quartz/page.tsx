@@ -6,7 +6,7 @@ import { Discounts } from '@/components/discounts'
 import { Faq } from '@/components/faq'
 import { FooterQr } from '@/components/footer-qr'
 import { MainBlock } from '@/components/main-block'
-import { ServiceCompound } from '@/components/service-compound'
+// import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
@@ -32,9 +32,9 @@ export default function Carcase() {
 				}
 			/>
 			<div className='container'>
-				<div className={cn.section}>
-					<ServiceCompound />
-				</div>
+				{/*<div className={cn.section}>*/}
+				{/*	<ServiceCompound />*/}
+				{/*</div>*/}
 				<div className={cn.section}>
 					<WhatIsUseful />
 				</div>

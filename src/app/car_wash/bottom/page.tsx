@@ -33,7 +33,9 @@ export default function Carcase() {
 			/>
 			<div className='container'>
 				<div className={cn.section}>
-					<ServiceCompound />
+					<ServiceCompound
+						main={[{ name: 'Мойка днища', price: 500, description: '' }]}
+					/>
 				</div>
 				<div className={cn.section}>
 					<WhatIsUseful />

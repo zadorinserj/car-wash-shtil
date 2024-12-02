@@ -37,6 +37,7 @@ export const ServiceCard: FC<{
 				<div className={cn.actions}>
 					<Button
 						href={url}
+						target='_self'
 						type='main'
 						color='green'
 						icon={arrowRightWhiteIcon}

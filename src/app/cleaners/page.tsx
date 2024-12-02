@@ -13,29 +13,53 @@ import { WhatIsUseful } from '@/components/what-is-useful'
 import cn from '../inner_page.module.css'
 
 export const metadata = {
-	title: 'Блеск и защита вашего авто — полировка кузова',
+	title: 'Автомойка в Ижевске — цены и акции!',
 	description:
-		'Профессиональная полировка кузова вернёт вашему автомобилю блеск и защитит от повреждений. Закажите услугу прямо сейчас!'
+		'Ищете недорогую мойку автомобиля в Ижевске? Мы предлагаем широкий спектр услуг по доступным ценам. '
 }
 
-export default function Carcase() {
+export default function Services() {
 	return (
 		<div>
 			<MainBlock
 				className={cn.mainBlock}
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
-				title={<>Полировка кузова</>}
+				title={<>Химчистка</>}
 			/>
 			<div className='container'>
 				<div className={cn.section}>
 					<ServiceCompound
 						main={[
 							{
-								name: 'Полировка',
-								price: 3800,
-								description:
-									'Фирменная мойка кузова с располировкой Твердого воска (2-х фазная мойка кузова с применением кисточки, для промывки труднодоступных мест, чистка от: битума, метал. вкраплений, липы, чернение резины премиум, наружного  пластика)'
+								name: 'Салон',
+								price: 7500,
+								description: 'Полная химчистка салона'
+							},
+							{
+								name: 'Пол/потолок',
+								price: 3000,
+								description: 'Ковровое покрытие пола или потолок со стойками'
+							},
+							{
+								name: 'Сидения',
+								price: 2000,
+								description: 'Химчистка двух сидений'
+							},
+							{
+								name: 'Локально',
+								price: 1500,
+								description: 'Локальная химчистка определенных мест'
+							},
+							{
+								name: 'Багажник',
+								price: 1500,
+								description: 'Химчистка багажника'
+							},
+							{
+								name: 'Двери',
+								price: 800,
+								description: 'Обработка четырех дверей'
 							}
 						]}
 					/>

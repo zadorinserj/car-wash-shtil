@@ -18,8 +18,8 @@ import cn from './index.module.css'
 
 export const Header: FC = () => {
 	const [carWashMenuOpen, setCarWashMenuOpen] = useState<boolean>(false)
-	const [cleaningMenuOpen, setCleaningMenuOpen] = useState<boolean>(false)
-	const [protectionMenuOpen, setProtectionMenuOpen] = useState<boolean>(false)
+	// const [cleaningMenuOpen, setCleaningMenuOpen] = useState<boolean>(false)
+	// const [protectionMenuOpen, setProtectionMenuOpen] = useState<boolean>(false)
 	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
 
 	return (
@@ -57,7 +57,8 @@ export const Header: FC = () => {
 							</div>
 						}
 					>
-						<div
+						<Link
+							href={Pages.CAR_WASH}
 							className={clsx(
 								cn.link,
 								cn.withIcon,
@@ -71,105 +72,102 @@ export const Header: FC = () => {
 									alt=''
 								/>
 							</div>
-						</div>
+						</Link>
 					</Tooltip>
-					<Tooltip
-						trigger='hover'
-						placement='bottom-start'
-						offset={[-60, 14]}
-						onToggle={setCleaningMenuOpen}
-						content={
-							<div className={cn.tooltip}>
-								<div className={cn.menuContent}>
-									{MENU.find(({ text }) => text === 'Химчистка').submenu.map(
-										({ text, url }) => (
-											<Link
-												key={text}
-												href={url}
-												className={cn.link}
-											>
-												{text}
-											</Link>
-										)
-									)}
-								</div>
-								<div className={cn.promoImage}>
-									<Image
-										src={menuCarWashImage}
-										alt=''
-										fill={true}
-									/>
-								</div>
-							</div>
-						}
+					{/*<Tooltip*/}
+					{/*	trigger='hover'*/}
+					{/*	placement='bottom-start'*/}
+					{/*	offset={[-60, 14]}*/}
+					{/*	onToggle={setCleaningMenuOpen}*/}
+					{/*	content={*/}
+					{/*		<div className={cn.tooltip}>*/}
+					{/*			<div className={cn.menuContent}>*/}
+					{/*				{MENU.find(*/}
+					{/*					({ text }) => text === 'Химчистка'*/}
+					{/*				)?.submenu?.map?.(({ text, url }) => (*/}
+					{/*					<Link*/}
+					{/*						key={text}*/}
+					{/*						href={url}*/}
+					{/*						className={cn.link}*/}
+					{/*					>*/}
+					{/*						{text}*/}
+					{/*					</Link>*/}
+					{/*				))}*/}
+					{/*			</div>*/}
+					{/*			<div className={cn.promoImage}>*/}
+					{/*				<Image*/}
+					{/*					src={menuCarWashImage}*/}
+					{/*					alt=''*/}
+					{/*					fill={true}*/}
+					{/*				/>*/}
+					{/*			</div>*/}
+					{/*		</div>*/}
+					{/*	}*/}
+					{/*>*/}
+					<Link
+						href={Pages.CLEANERS}
+						className={clsx(cn.link)}
 					>
-						<div
-							className={clsx(
-								cn.link,
-								cn.withIcon,
-								cleaningMenuOpen && cn.withIconRotate
-							)}
-						>
-							Химчистка
-							<div className={cn.icon}>
-								<Image
-									src={arrowBottomIcon}
-									alt=''
-								/>
-							</div>
-						</div>
-					</Tooltip>
-					<Tooltip
-						trigger='hover'
-						placement='bottom-start'
-						offset={[-60, 14]}
-						onToggle={setProtectionMenuOpen}
-						content={
-							<div className={cn.tooltip}>
-								<div className={cn.menuContent}>
-									{MENU.find(
-										({ text }) => text === 'Защитные покрытия'
-									).submenu.map(({ text, url }) => (
-										<Link
-											key={text}
-											href={url}
-											className={cn.link}
-										>
-											{text}
-										</Link>
-									))}
-								</div>
-								<div className={cn.promoImage}>
-									<Image
-										src={menuCarWashImage}
-										alt=''
-										fill={true}
-									/>
-								</div>
-							</div>
-						}
-					>
-						<div
-							className={clsx(
-								cn.link,
-								cn.withIcon,
-								protectionMenuOpen && cn.withIconRotate
-							)}
-						>
-							Защита кузова
-							<div className={cn.icon}>
-								<Image
-									src={arrowBottomIcon}
-									alt=''
-								/>
-							</div>
-						</div>
-					</Tooltip>
+						Химчистка
+					</Link>
+					{/*</Tooltip>*/}
+					{/*<Tooltip*/}
+					{/*	trigger='hover'*/}
+					{/*	placement='bottom-start'*/}
+					{/*	offset={[-60, 14]}*/}
+					{/*	onToggle={setProtectionMenuOpen}*/}
+					{/*	content={*/}
+					{/*		<div className={cn.tooltip}>*/}
+					{/*			<div className={cn.menuContent}>*/}
+					{/*				{MENU.find(*/}
+					{/*					({ text }) => text === 'Защитные покрытия'*/}
+					{/*				)?.submenu?.map?.(({ text, url }) => (*/}
+					{/*					<Link*/}
+					{/*						key={text}*/}
+					{/*						href={url}*/}
+					{/*						className={cn.link}*/}
+					{/*					>*/}
+					{/*						{text}*/}
+					{/*					</Link>*/}
+					{/*				))}*/}
+					{/*			</div>*/}
+					{/*			<div className={cn.promoImage}>*/}
+					{/*				<Image*/}
+					{/*					src={menuCarWashImage}*/}
+					{/*					alt=''*/}
+					{/*					fill={true}*/}
+					{/*				/>*/}
+					{/*			</div>*/}
+					{/*		</div>*/}
+					{/*	}*/}
+					{/*>*/}
+					{/*	<div*/}
+					{/*		className={clsx(*/}
+					{/*			cn.link,*/}
+					{/*			cn.withIcon,*/}
+					{/*			protectionMenuOpen && cn.withIconRotate*/}
+					{/*		)}*/}
+					{/*	>*/}
+					{/*		Защита кузова*/}
+					{/*		<div className={cn.icon}>*/}
+					{/*			<Image*/}
+					{/*				src={arrowBottomIcon}*/}
+					{/*				alt=''*/}
+					{/*			/>*/}
+					{/*		</div>*/}
+					{/*	</div>*/}
+					{/*</Tooltip>*/}
 					<Link
 						href={Pages.POLISHING}
 						className={cn.link}
 					>
 						Полировка
+					</Link>
+					<Link
+						href={Pages.PROTECTION_CERAMICS}
+						className={cn.link}
+					>
+						Керамопокрытие
 					</Link>
 					{/*<Link*/}
 					{/*	href={Pages.DETAILING}*/}

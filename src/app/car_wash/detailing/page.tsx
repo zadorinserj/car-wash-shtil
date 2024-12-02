@@ -6,16 +6,16 @@ import { Discounts } from '@/components/discounts'
 import { Faq } from '@/components/faq'
 import { FooterQr } from '@/components/footer-qr'
 import { MainBlock } from '@/components/main-block'
-// import { ServiceCompound } from '@/components/service-compound'
+import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
 import cn from '../../inner_page.module.css'
 
 export const metadata = {
-	title: 'Покрытие воском автомобиля — сохраните его красоту надолго!',
+	title: 'Комплексная мойка авто в Ижевске — цены и услуги!',
 	description:
-		'Узнайте, как покрытие воском помогает защитить кузов вашего автомобиля от внешних воздействий!'
+		'Ищете комплексную мойку автомобиля в Ижевске? Мы предлагаем широкий спектр услуг по доступным ценам! Узнайте, что входит в комплексную мойку и сколько это стоит!'
 }
 
 export default function Carcase() {
@@ -25,16 +25,21 @@ export default function Carcase() {
 				className={cn.mainBlock}
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
-				title={
-					<>
-						Покрытие воском <br /> автомобиля
-					</>
-				}
+				title={<>Детейлинг мойка</>}
 			/>
 			<div className='container'>
-				{/*<div className={cn.section}>*/}
-				{/*	<ServiceCompound />*/}
-				{/*</div>*/}
+				<div className={cn.section}>
+					<ServiceCompound
+						main={[
+							{
+								name: 'Детейлинг мойка',
+								price: 1600,
+								description:
+									'Мойка с нанесением быстрого кварцевого состава (2-х фазная мойка  кузова с применением кисточки, для промывки труднодоступных мест, продуем и высушим бесконтакной турбосушкой, чернение резины и наружного пластика'
+							}
+						]}
+					/>
+				</div>
 				<div className={cn.section}>
 					<WhatIsUseful />
 				</div>

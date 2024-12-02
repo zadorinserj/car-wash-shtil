@@ -9,12 +9,13 @@ export default (phase) => {
         images: {
             unoptimized: true
         },
-        // distDir: 'dist',
-        // output: 'export',
     }
 
     if (production) {
-        // nextConfig.assetPrefix = './';
+        // nextConfig.output = 'export';
+        nextConfig.trailingSlash = true;
+        // nextConfig.assetPrefix = 'https://cy79364.tw1.ru/';
+        // nextConfig.assetPrefix = 'https://moishtil18.ru/';
     }
 
     return nextConfig

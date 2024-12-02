@@ -32,17 +32,17 @@ export default function Services() {
 			</Typography>
 			<div className={cn.header}>
 				<ServiceCard
-					title='Мойка кузова'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
-					tag='от 1000 ₽'
+					title='Европейская'
+					paragraph='2-х фазная мойка кузова и дисков губкой с полирущющим шампунем, коврики и пороги, продуем и высушим специальным полотенцем'
+					tag='от 500 ₽'
 					image={carWashServices1Image}
 					mobileImage={carWashServicesMobile1Image}
-					url={Pages.CAR_WASH_CARCASE}
+					url={Pages.CAR_WASH_EUROPEAN}
 				/>
 				<ServiceCard
-					title='Комплексная мойка'
-					paragraph='В услугу входит мойка кузова, чистка педалей, сухая и влажная уборка салона и стекол'
-					tag='от 1000 ₽'
+					title='Детейлинг мойка'
+					paragraph='с нанесением быстрого кварцевого состава'
+					tag='от 1600 ₽'
 					image={carWashServices2Image}
 					mobileImage={carWashServicesMobile2Image}
 					url={Pages.CAR_WASH_COMPLEX}
@@ -50,34 +50,34 @@ export default function Services() {
 			</div>
 			<div className={cn.content}>
 				<ServiceCard
-					title='Двухфазная'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
-					tag='от 1000 ₽'
-					url={Pages.CAR_WASH_THO_PHASE}
-				/>
-				<ServiceCard
-					title='Трехфазная'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
-					tag='от 1000 ₽'
-					url={Pages.CAR_WASH_THREE_PHASE}
-				/>
-				<ServiceCard
-					title='Днище'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
-					tag='от 1000 ₽'
+					title='Мойка днища'
+					paragraph='3-х фазная мойка, с полирующим консервантом, бережная сушка турбосушкой'
+					tag='от 500 ₽'
 					url={Pages.CAR_WASH_BOTTOM}
 				/>
 				<ServiceCard
-					title='Салон'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
+					title='Сухая уборка салона'
+					paragraph='Уборка пылесосом пола, сидений'
 					tag='от 1000 ₽'
-					url={Pages.CAR_WASH_SALON}
+					url={Pages.CAR_WASH_DRY}
 				/>
 				<ServiceCard
-					title='Грузовые авто'
-					paragraph='Услуга включает очистку кузова, дисков, арок, ковриков и последующую сушку'
-					tag='от 1000 ₽'
-					url={Pages.CAR_WASH_TRUCK}
+					title='Влажная уборка'
+					paragraph='Уборка салона. Мойка окон, пластиковых поверхностей'
+					tag='от 420 ₽'
+					url={Pages.CAR_WASH_WET}
+				/>
+				<ServiceCard
+					title='Уборка багажинка'
+					paragraph='Внутренняя уборка багажника (влажная и сухая)'
+					tag='от 200 ₽'
+					url={Pages.CAR_WASH_TRUNK}
+				/>
+				<ServiceCard
+					title='Чистка от шерсти'
+					paragraph='Уборка салона от шерсти, чистка специальной щеткой'
+					tag='от 500 ₽'
+					url={Pages.CAR_WASH_HAIR}
 				/>
 			</div>
 			<div className={cn.section}>

@@ -6,16 +6,15 @@ import { Discounts } from '@/components/discounts'
 import { Faq } from '@/components/faq'
 import { FooterQr } from '@/components/footer-qr'
 import { MainBlock } from '@/components/main-block'
-// import { ServiceCompound } from '@/components/service-compound'
+import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
 import cn from '../../inner_page.module.css'
 
 export const metadata = {
-	title: 'Покрытие воском автомобиля — сохраните его красоту надолго!',
-	description:
-		'Узнайте, как покрытие воском помогает защитить кузов вашего автомобиля от внешних воздействий!'
+	title: 'Уборка багажника!',
+	description: 'Внутренняя уборка багажника (влажная и сухая)'
 }
 
 export default function Carcase() {
@@ -25,16 +24,20 @@ export default function Carcase() {
 				className={cn.mainBlock}
 				image={mainPageBgImage}
 				mobileImage={mainPageBgMobileImage}
-				title={
-					<>
-						Покрытие воском <br /> автомобиля
-					</>
-				}
+				title={<>Уборка багажника</>}
 			/>
 			<div className='container'>
-				{/*<div className={cn.section}>*/}
-				{/*	<ServiceCompound />*/}
-				{/*</div>*/}
+				<div className={cn.section}>
+					<ServiceCompound
+						main={[
+							{
+								name: 'Багажник',
+								price: 200,
+								description: 'Внутренняя уборка багажника (влажная и сухая)'
+							}
+						]}
+					/>
+				</div>
 				<div className={cn.section}>
 					<WhatIsUseful />
 				</div>

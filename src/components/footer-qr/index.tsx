@@ -7,6 +7,8 @@ import { FC } from 'react'
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
 
+import { ROCKET_WASH_URL } from '@/constants/pages'
+
 import cn from './index.module.css'
 
 export const FooterQr: FC = () => {
@@ -33,6 +35,7 @@ export const FooterQr: FC = () => {
 				type='main'
 				icon={arrowTopRightIcon}
 				hoverIcon={arrowTopRightGreenIcon}
+				href={ROCKET_WASH_URL}
 			>
 				Онлайн-запись
 			</Button>

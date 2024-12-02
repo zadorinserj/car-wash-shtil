@@ -13,9 +13,9 @@ import { WhatIsUseful } from '@/components/what-is-useful'
 import cn from '../../inner_page.module.css'
 
 export const metadata = {
-	title: 'Керамическая полировка кузова авто — отзывы владельцев и цены',
+	title: 'Керамическая защита кузова авто — отзывы владельцев и цены',
 	description:
-		'Керамическая полировка кузова автомобиля. Отзывы владельцев, цены и многое другое'
+		'Керамическая защита кузова автомобиля. Отзывы владельцев, цены и многое другое'
 }
 
 export default function Carcase() {
@@ -27,13 +27,21 @@ export default function Carcase() {
 				mobileImage={mainPageBgMobileImage}
 				title={
 					<>
-						Керамическая <br /> полировка кузова
+						Керамическая <br /> защита кузова
 					</>
 				}
 			/>
 			<div className='container'>
 				<div className={cn.section}>
-					<ServiceCompound />
+					<ServiceCompound
+						main={[
+							{
+								name: 'Керамическая защита',
+								price: 1000,
+								description: 'Керамо-покрытие GYEON (кузов и стекла)'
+							}
+						]}
+					/>
 				</div>
 				<div className={cn.section}>
 					<WhatIsUseful />

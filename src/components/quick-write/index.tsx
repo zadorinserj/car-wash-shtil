@@ -1,12 +1,14 @@
 import arrowTopRightGreenIcon from '@public/icons/arrow-top-right-green-icon.svg'
 import arrowTopRightIcon from '@public/icons/arrow-top-right-icon.svg'
 import quickWriteBgImage from '@public/images/quick-write-bg.png'
-import quickWriteQrImage from '@public/images/quick-write-qr-image.png'
+import quickWriteQrImage from '@public/images/quick-write-qr-image.webp'
 import Image from 'next/image'
 import { FC } from 'react'
 
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
+
+import { ROCKET_WASH_URL } from '@/constants/pages'
 
 import cn from './index.module.css'
 
@@ -33,6 +35,7 @@ export const QuickWrite: FC = () => {
 					type='main'
 					icon={arrowTopRightIcon}
 					hoverIcon={arrowTopRightGreenIcon}
+					href={ROCKET_WASH_URL}
 				>
 					Онлайн запись
 				</Button>

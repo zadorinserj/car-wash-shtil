@@ -160,3 +160,61 @@
         }
     }
 }
+
+.qrWrapper {
+    position: relative;
+    height: 346px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 2.26 / 1;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #9EE970;
+
+    @media (max-width: 1440px) {
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        aspect-ratio: auto;
+        border-radius: 36px;
+    }
+}
+
+.qrImage {
+    position: relative;
+    width: 264px;
+    height: 264px;
+    z-index: 1;
+
+    @media (max-width: 1440px) {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+.qrImageInner {
+    z-index: 1;
+}
+
+.qrImageBefore {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 628px;
+    height: 420px;
+
+    @media (max-width: 1440px) {
+        width: 550px;
+        height: 370px;
+    }
+
+    @media (max-width: 768px) {
+        transform: translate(-50%, -47%);
+        width: 471px;
+        height: 330px;
+    }
+}

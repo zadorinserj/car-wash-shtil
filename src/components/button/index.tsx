@@ -7,7 +7,8 @@ import cn from './style.module.css'
 
 export const Button: FC<{
 	className?: string
-	href?: string
+	href?: any
+	target?: '_blank' | '_self'
 	type?: 'main' | 'secondary'
 	color?: 'white' | 'green' | 'black' | 'grey'
 	size?: 'l' | 'm' | 's'
@@ -21,6 +22,7 @@ export const Button: FC<{
 }> = ({
 	className,
 	href = undefined,
+	target = '_blank',
 	type = 'secondary',
 	color = 'white',
 	size = 'l',
@@ -48,7 +50,7 @@ export const Button: FC<{
 				className
 			)}
 			href={href}
-			target='_blank'
+			target={target}
 			onClick={onClick}
 		>
 			{children && <span className={cn.text}>{children}</span>}

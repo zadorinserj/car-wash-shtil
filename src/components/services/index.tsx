@@ -10,6 +10,8 @@ import { FC } from 'react'
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
 
+import { Pages } from '@/constants/pages'
+
 import cn from './index.module.css'
 
 export const Services: FC = () => {
@@ -55,6 +57,8 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
+								href={Pages.CAR_WASH}
+								target='_self'
 							>
 								Подробнее
 							</Button>
@@ -63,7 +67,7 @@ export const Services: FC = () => {
 								tag='p'
 								size='s'
 							>
-								от 300 ₽
+								от 600 ₽
 							</Typography>
 						</div>
 					</div>
@@ -89,7 +93,7 @@ export const Services: FC = () => {
 							tag='h3'
 							size='s'
 						>
-							Детейлинг автомобиля
+							Полировка
 						</Typography>
 						<Typography
 							className={cn.paragraph}
@@ -107,6 +111,8 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
+								href={Pages.POLISHING}
+								target='_self'
 							>
 								Подробнее
 							</Button>
@@ -115,7 +121,7 @@ export const Services: FC = () => {
 								tag='p'
 								size='s'
 							>
-								от 1000 ₽
+								от 1500 ₽
 							</Typography>
 						</div>
 					</div>
@@ -159,6 +165,8 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
+								href={Pages.CLEANERS}
+								target='_self'
 							>
 								Подробнее
 							</Button>
@@ -167,7 +175,7 @@ export const Services: FC = () => {
 								tag='p'
 								size='s'
 							>
-								от 3000 ₽
+								от 7500 ₽
 							</Typography>
 						</div>
 					</div>
@@ -211,6 +219,8 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
+								href={Pages.PROTECTION_CERAMICS}
+								target='_self'
 							>
 								Подробнее
 							</Button>
@@ -219,7 +229,7 @@ export const Services: FC = () => {
 								tag='p'
 								size='s'
 							>
-								от 3000 ₽
+								от 1000 ₽
 							</Typography>
 						</div>
 					</div>

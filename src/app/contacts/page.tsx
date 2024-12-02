@@ -5,14 +5,17 @@ import arrowTopRightGreenIcon from '@public/icons/arrow-top-right-green-icon.svg
 import vkBlueIcon from '@public/icons/vk-blue-icon.svg'
 import yandexIcon from '@public/icons/yandex-icon.svg'
 import contacts1Image from '@public/images/contacts-1.webp'
-import contacts2Image from '@public/images/contacts-2.png'
 import contacts3Image from '@public/images/contacts-3.png'
+import contacts2BgImage from '@public/images/quick-write-bg.png'
+import contacts2Image from '@public/images/quick-write-qr-image.webp'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
+
+import { ROCKET_WASH_URL } from '@/constants/pages'
 
 import cn from './page.module.css'
 
@@ -101,12 +104,20 @@ export default function Contacts() {
 				</div>
 			</section>
 			<section className={cn.card}>
-				<div className={cn.image}>
-					<Image
-						src={contacts2Image}
-						alt=''
-						fill={true}
-					/>
+				<div className={cn.qrWrapper}>
+					<div className={cn.qrImage}>
+						<Image
+							className={cn.qrImageInner}
+							src={contacts2Image}
+							alt=''
+							fill={true}
+						/>
+						<Image
+							className={cn.qrImageBefore}
+							src={contacts2BgImage}
+							alt=''
+						/>
+					</div>
 				</div>
 				<div className={cn.content}>
 					<Typography
@@ -130,6 +141,7 @@ export default function Contacts() {
 						icon={arrowRightWhiteIcon}
 						hoverIcon={arrowRightBlackIcon}
 						animationDirection='left'
+						href={ROCKET_WASH_URL}
 					>
 						Онлайн запись
 					</Button>

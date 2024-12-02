@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'font-hoves';
-    src: url('fonts/hovesProMedium.ttf');
+    src: url('fonts/TT_Hoves_Pro_Medium.woff') format('woff'), url('fonts/TT_Hoves_Pro_Medium.woff2') format('woff2');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'font-hoves-expanded';
-    src: url('fonts/hovesProExpandedMedium.ttf'), url('fonts/hovesProExpandedDemiBold.ttf');
+    src: url('fonts/TT_Hoves_Pro_Expanded_Medium.woff') format('woff'), url('fonts/TT_Hoves_Pro_Expanded_Medium.woff2') format('woff2'), url('fonts/TT_Hoves_Pro_Expanded_DemiBold.woff') format('woff'), url('fonts/TT_Hoves_Pro_Expanded_DemiBold.woff2') format('woff2');
 }
 
 :root {

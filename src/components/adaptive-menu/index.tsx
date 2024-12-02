@@ -15,10 +15,6 @@ import cn from './index.module.css'
 export const AdaptiveMenu: FC = () => {
 	const [selected, setSelected] = useState<string>('')
 
-	const handleChange = id => {
-		setSelected(selected === id ? '' : id)
-	}
-
 	const submenu = useMemo(() => {
 		if (selected === '') return []
 
@@ -46,48 +42,92 @@ export const AdaptiveMenu: FC = () => {
 				<div
 					className={clsx(cn.submenu, selected !== '' && cn.topMenuSelected)}
 				>
-					{MENU.map(({ text, submenu = null, url = null }) =>
-						url !== null ? (
-							<Link
-								className={clsx(cn.link, selected !== '' && cn.itemHint)}
-								key={url}
-								href={url}
-							>
-								<Typography
-									tag='p'
-									size='s'
-								>
-									{submenu}
-									{text}
-								</Typography>
-							</Link>
-						) : (
-							<button
-								key={text}
-								className={clsx(
-									cn.item,
-									selected !== '' && cn.itemHint,
-									selected === text && cn.itemSelected
-								)}
-								onClick={() => handleChange(text)}
-							>
-								<Typography
-									tag='p'
-									size='s'
-								>
-									{text}
-								</Typography>
-								{submenu !== null && (
-									<div className={cn.icon}>
-										<Image
-											src={arrowBottomIcon}
-											alt=''
-										/>
-									</div>
-								)}
-							</button>
-						)
-					)}
+					{/*{MENU.map(({ text, submenu = null, url = null }) =>*/}
+					{/*	url !== null ? (*/}
+					{/*		<Link*/}
+					{/*			className={clsx(cn.link, selected !== '' && cn.itemHint)}*/}
+					{/*			key={url}*/}
+					{/*			href={url}*/}
+					{/*		>*/}
+					{/*			<Typography*/}
+					{/*				tag='p'*/}
+					{/*				size='s'*/}
+					{/*			>*/}
+					{/*				{submenu}*/}
+					{/*				{text}*/}
+					{/*			</Typography>*/}
+					{/*		</Link>*/}
+					{/*	) : (*/}
+					{/*		<button*/}
+					{/*			key={text}*/}
+					{/*			className={clsx(*/}
+					{/*				cn.item,*/}
+					{/*				selected !== '' && cn.itemHint,*/}
+					{/*				selected === text && cn.itemSelected*/}
+					{/*			)}*/}
+					{/*			onClick={() => handleChange(text)}*/}
+					{/*		>*/}
+					{/*			<Typography*/}
+					{/*				tag='p'*/}
+					{/*				size='s'*/}
+					{/*			>*/}
+					{/*				{text}*/}
+					{/*			</Typography>*/}
+					{/*			{submenu !== null && (*/}
+					{/*				<div className={cn.icon}>*/}
+					{/*					<Image*/}
+					{/*						src={arrowBottomIcon}*/}
+					{/*						alt=''*/}
+					{/*					/>*/}
+					{/*				</div>*/}
+					{/*			)}*/}
+					{/*		</button>*/}
+					{/*	)*/}
+					{/*)}*/}
+					<Link
+						className={clsx(cn.link)}
+						href={Pages.CAR_WASH}
+					>
+						<Typography
+							tag='p'
+							size='s'
+						>
+							Автомойка
+						</Typography>
+					</Link>
+					<Link
+						className={clsx(cn.link)}
+						href={Pages.CLEANERS}
+					>
+						<Typography
+							tag='p'
+							size='s'
+						>
+							Химчистка
+						</Typography>
+					</Link>
+					<Link
+						className={clsx(cn.link)}
+						href={Pages.POLISHING}
+					>
+						<Typography
+							tag='p'
+							size='s'
+						>
+							Полировка
+						</Typography>
+					</Link>
+					<Link
+						className={clsx(cn.link)}
+						href={Pages.PROTECTION_CERAMICS}
+					>
+						<Typography
+							tag='p'
+							size='s'
+						>
+							Керамопокрытие
+						</Typography>
+					</Link>
 					<Link
 						className={clsx(
 							cn.link,
