@@ -1,0 +1,23 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/car_wash/detailing/page": "app/car_wash/detailing/page.js",
+  "/car_wash/page": "app/car_wash/page.js",
+  "/car_wash/dry/page": "app/car_wash/dry/page.js",
+  "/car_wash/bottom/page": "app/car_wash/bottom/page.js",
+  "/car_wash/wet/page": "app/car_wash/wet/page.js",
+  "/cleaners/carcase/page": "app/cleaners/carcase/page.js",
+  "/car_wash/trunk/page": "app/car_wash/trunk/page.js",
+  "/car_wash/hair/page": "app/car_wash/hair/page.js",
+  "/cleaners/salon/page": "app/cleaners/salon/page.js",
+  "/cleaners/page": "app/cleaners/page.js",
+  "/car_wash/european/page": "app/car_wash/european/page.js",
+  "/detailing/page": "app/detailing/page.js",
+  "/polishing/page": "app/polishing/page.js",
+  "/page": "app/page.js",
+  "/protection/page": "app/protection/page.js",
+  "/contacts/page": "app/contacts/page.js",
+  "/protection/ceramics/page": "app/protection/ceramics/page.js",
+  "/protection/wax/page": "app/protection/wax/page.js",
+  "/protection/quartz/page": "app/protection/quartz/page.js"
+}
