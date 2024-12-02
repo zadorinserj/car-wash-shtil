@@ -8,9 +8,9 @@ COPY . .
 
 RUN npm install
 
-RUN npm run build
+RUN next build
 
 EXPOSE 3000
 
 # 8. Устанавливаем команду для запуска приложения
-ENTRYPOINT ["/bin/sh", "-c", "npm run start"]
+CMD 'next start'
