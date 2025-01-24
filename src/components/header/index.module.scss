@@ -72,15 +72,15 @@
     @media (max-width: 1440px) {
         gap: 40px;
     }
+
+    @media (max-width: 768px) {
+        gap: 16px;
+    }
 }
 
 .phone {
     position: relative;
     z-index: 1;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
 
     &:after {
         content: '';

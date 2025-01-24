@@ -3,7 +3,7 @@
 import clsx from 'clsx'
 import { FC, forwardRef, useState } from 'react'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export type TInputProps = {
 	className?: string

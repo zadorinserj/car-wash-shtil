@@ -10,7 +10,7 @@ import { Button } from '@/components/button'
 import { BaseModal } from '@/components/modals/base-modal'
 import { Typography } from '@/components/typography'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const CompleteModal: FC<{ open: boolean; onClose: () => void }> = ({
 	onClose

@@ -17,7 +17,7 @@ import { Typography } from '@/components/typography'
 
 import { ROCKET_WASH_URL } from '@/constants/pages'
 
-import cn from './page.module.css'
+import cn from './page.module.scss'
 
 export const metadata = {
 	title: 'Автомойка рядом 🚘 — круглосуточная мойка в Ижевске',
@@ -171,7 +171,7 @@ export default function Contacts() {
 						Публикуем новости, акции, расписание и новинки
 					</Typography>
 					<Button
-						href='https://vk.com/shtil18'
+						href='https://vk.com/izh_shtil'
 						type='main'
 						color='green'
 						icon={vkBlueIcon}

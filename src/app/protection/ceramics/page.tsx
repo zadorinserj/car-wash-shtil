@@ -10,7 +10,7 @@ import { ServiceCompound } from '@/components/service-compound'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
-import cn from '../../inner_page.module.css'
+import cn from '../../inner_page.module.scss'
 
 export const metadata = {
 	title: 'Керамическая защита кузова авто — отзывы владельцев и цены',

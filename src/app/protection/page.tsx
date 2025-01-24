@@ -8,7 +8,7 @@ import { Typography } from '@/components/typography'
 
 import { Pages } from '@/constants/pages'
 
-import cn from './page.module.css'
+import cn from './page.module.scss'
 
 export const metadata = {
 	title: 'Защитное покрытие кузова – сохраните красоту авто!',

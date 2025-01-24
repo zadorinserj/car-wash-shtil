@@ -10,7 +10,7 @@ import { Typography } from '@/components/typography'
 
 import { ROCKET_WASH_URL } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const QuickWrite: FC = () => {
 	return (

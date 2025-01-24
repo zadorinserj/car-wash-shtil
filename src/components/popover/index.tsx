@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { FC, ReactNode, useState } from 'react'
 import { usePopper } from 'react-popper'
 
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 export const Popover: FC<{
 	className?: string

@@ -203,3 +203,9 @@
     color: #9EE970;
     text-decoration: none;
 }
+
+.menu {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}

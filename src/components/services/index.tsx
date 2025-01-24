@@ -10,9 +10,9 @@ import { FC } from 'react'
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
 
-import { Pages } from '@/constants/pages'
+import { Pages, ROCKET_WASH_URL } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Services: FC = () => {
 	return (
@@ -39,15 +39,15 @@ export const Services: FC = () => {
 							tag='h3'
 							size='s'
 						>
-							Автомойка и чистка салона
+							Европейская мойка
 						</Typography>
 						<Typography
 							className={cn.paragraph}
 							tag='p'
 							size='s'
 						>
-							Мойка кузова и салона поддерживает чистоту и сохраняет
-							работоспособность авто, как утренний душ
+							2-х фазная мойка кузова с сушкой специальным полотенцем. Так же
+							помоем коврики и пороги.
 						</Typography>
 						<div className={cn.actions}>
 							<Button
@@ -57,17 +57,16 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
-								href={Pages.CAR_WASH}
-								target='_self'
+								href={ROCKET_WASH_URL}
 							>
-								Подробнее
+								Записаться
 							</Button>
 							<Typography
 								className={cn.tag}
 								tag='p'
 								size='s'
 							>
-								от 600 ₽
+								от 900 ₽
 							</Typography>
 						</div>
 					</div>
@@ -93,15 +92,15 @@ export const Services: FC = () => {
 							tag='h3'
 							size='s'
 						>
-							Полировка
+							Комплексная мойка
 						</Typography>
 						<Typography
 							className={cn.paragraph}
 							tag='p'
 							size='s'
 						>
-							Глубокая очистка, защита и восстановление автомобиля — это как
-							нарядиться перед важным свиданием
+							2-х фазная мойка кузова с сушкой, а так же выполним сухую и
+							влажную уборку салона.
 						</Typography>
 						<div className={cn.actions}>
 							<Button
@@ -111,17 +110,16 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
-								href={Pages.POLISHING}
-								target='_self'
+								href={ROCKET_WASH_URL}
 							>
-								Подробнее
+								Записаться
 							</Button>
 							<Typography
 								className={cn.tag}
 								tag='p'
 								size='s'
 							>
-								от 1500 ₽
+								от 1800 ₽
 							</Typography>
 						</div>
 					</div>
@@ -165,17 +163,16 @@ export const Services: FC = () => {
 								hoverIcon={arrowRightBlackIcon}
 								animationDirection='left'
 								hoverColor={false}
-								href={Pages.CLEANERS}
-								target='_self'
+								href={ROCKET_WASH_URL}
 							>
-								Подробнее
+								Записаться
 							</Button>
 							<Typography
 								className={cn.tag}
 								tag='p'
 								size='s'
 							>
-								от 7500 ₽
+								от 10 000 ₽
 							</Typography>
 						</div>
 					</div>
@@ -187,60 +184,59 @@ export const Services: FC = () => {
 						/>
 					</div>
 				</div>
-				<div className={cn.section}>
-					<div className={cn.content}>
-						<Typography
-							className={cn.number}
-							tag='p'
-							size='s'
-						>
-							04
-						</Typography>
-						<Typography
-							className={cn.title}
-							tag='h3'
-							size='s'
-						>
-							Защитные покрытия кузова
-						</Typography>
-						<Typography
-							className={cn.paragraph}
-							tag='p'
-							size='s'
-						>
-							Это как антивозрастной крем, который превращает 10-летний
-							автомобиль в 5-летний
-						</Typography>
-						<div className={cn.actions}>
-							<Button
-								type='main'
-								color='green'
-								icon={arrowRightWhiteIcon}
-								hoverIcon={arrowRightBlackIcon}
-								animationDirection='left'
-								hoverColor={false}
-								href={Pages.PROTECTION_CERAMICS}
-								target='_self'
-							>
-								Подробнее
-							</Button>
-							<Typography
-								className={cn.tag}
-								tag='p'
-								size='s'
-							>
-								от 1000 ₽
-							</Typography>
-						</div>
-					</div>
-					<div className={cn.image}>
-						<Image
-							src={services4Image}
-							alt=''
-							fill={true}
-						/>
-					</div>
-				</div>
+				{/*<div className={cn.section}>*/}
+				{/*	<div className={cn.content}>*/}
+				{/*		<Typography*/}
+				{/*			className={cn.number}*/}
+				{/*			tag='p'*/}
+				{/*			size='s'*/}
+				{/*		>*/}
+				{/*			04*/}
+				{/*		</Typography>*/}
+				{/*		<Typography*/}
+				{/*			className={cn.title}*/}
+				{/*			tag='h3'*/}
+				{/*			size='s'*/}
+				{/*		>*/}
+				{/*			Полировка*/}
+				{/*		</Typography>*/}
+				{/*		<Typography*/}
+				{/*			className={cn.paragraph}*/}
+				{/*			tag='p'*/}
+				{/*			size='s'*/}
+				{/*		>*/}
+				{/*			Это как антивозрастной крем, который превращает 10-летний*/}
+				{/*			автомобиль в 5-летний*/}
+				{/*		</Typography>*/}
+				{/*		<div className={cn.actions}>*/}
+				{/*			<Button*/}
+				{/*				type='main'*/}
+				{/*				color='green'*/}
+				{/*				icon={arrowRightWhiteIcon}*/}
+				{/*				hoverIcon={arrowRightBlackIcon}*/}
+				{/*				animationDirection='left'*/}
+				{/*				hoverColor={false}*/}
+				{/*				href={ROCKET_WASH_URL}*/}
+				{/*			>*/}
+				{/*				Записаться*/}
+				{/*			</Button>*/}
+				{/*			<Typography*/}
+				{/*				className={cn.tag}*/}
+				{/*				tag='p'*/}
+				{/*				size='s'*/}
+				{/*			>*/}
+				{/*				от 1000 ₽*/}
+				{/*			</Typography>*/}
+				{/*		</div>*/}
+				{/*	</div>*/}
+				{/*	<div className={cn.image}>*/}
+				{/*		<Image*/}
+				{/*			src={services4Image}*/}
+				{/*			alt=''*/}
+				{/*			fill={true}*/}
+				{/*		/>*/}
+				{/*	</div>*/}
+				{/*</div>*/}
 			</div>
 		</section>
 	)

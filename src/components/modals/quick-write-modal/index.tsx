@@ -20,7 +20,7 @@ import { emailValidator } from '@/utils/validators/email-validator'
 import { phoneValidator } from '@/utils/validators/phone'
 import { requiredValidator } from '@/utils/validators/required'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 import { useModal } from '@/context/modal-context'
 
 const PHONE_MASK = [

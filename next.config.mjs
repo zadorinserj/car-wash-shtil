@@ -9,15 +9,15 @@ export default (phase) => {
         images: {
             unoptimized: true
         },
-        output: 'standalone'
+        // output: 'standalone'
         // distDir: 'dist'
     }
 
     if (production) {
-        // nextConfig.output = 'export';
-        // nextConfig.trailingSlash = true;
-        // nextConfig.assetPrefix = 'https://cy79364.tw1.ru/';
-        // nextConfig.assetPrefix = 'https://moishtil18.ru/';
+        nextConfig.output = 'export';
+        nextConfig.trailingSlash = true;
+        // nextConfig.assetPrefix = './';
+        nextConfig.assetPrefix = 'https://moishtil18.ru/';
     }
 
     return nextConfig

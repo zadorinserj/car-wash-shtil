@@ -10,7 +10,7 @@ import { Typography } from '@/components/typography'
 
 import { MENU, Pages } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const AdaptiveMenu: FC = () => {
 	const [selected, setSelected] = useState<string>('')

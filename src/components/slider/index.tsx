@@ -15,7 +15,7 @@ import SlickSlider from 'react-slick'
 import { Button } from '@/components/button'
 import { Typography } from '@/components/typography'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Slider = ({ title }) => {
 	const [slideIndex, setSlideIndex] = useState(0)

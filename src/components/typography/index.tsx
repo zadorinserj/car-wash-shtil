@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { FC, ReactNode } from 'react'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Typography: FC<{
 	className?: string

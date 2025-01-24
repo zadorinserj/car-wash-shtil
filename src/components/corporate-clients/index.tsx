@@ -10,7 +10,7 @@ import { Button } from '@/components/button'
 import { ModalTypes } from '@/components/modals'
 import { Typography } from '@/components/typography'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 import { useModal } from '@/context/modal-context'
 
 export const CorporateClients: FC = () => {

@@ -9,28 +9,42 @@
     src: url('fonts/TT_Hoves_Pro_Expanded_Medium.woff') format('woff'), url('fonts/TT_Hoves_Pro_Expanded_Medium.woff2') format('woff2'), url('fonts/TT_Hoves_Pro_Expanded_DemiBold.woff') format('woff'), url('fonts/TT_Hoves_Pro_Expanded_DemiBold.woff2') format('woff2');
 }
 
+:host {
+    width: 100%;
+    height: 100%;
+}
+
 :root {
     --color-accent: #9EE970;
     --font-hoves: 'font-hoves', sans-serif;
     --font-hoves-expanded: 'font-hoves-expanded', sans-serif;
 }
 
-html {
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
     overflow-x: hidden;
 }
 
 body {
+    padding: 0;
+    margin: 0;
     font-family: var(--font-hoves);
-    overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+button {
+    border: none;
 }
 
 .container {

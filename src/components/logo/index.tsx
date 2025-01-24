@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Logo: FC<{ color?: 'green' | 'white' }> = ({
 	color = 'green'

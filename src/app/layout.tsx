@@ -1,14 +1,14 @@
 import { GoogleTagManager } from '@next/third-parties/google'
-import { Metadata, Viewport } from 'next'
-import { ReactNode } from 'react'
+import { Metadata } from 'next'
+import { ReactNode, Suspense } from 'react'
 import 'slick-carousel/slick/slick.css'
 
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
+import { Metrika } from '@/components/metrika'
 import { Modals } from '@/components/modals'
 
-import cn from './layout.module.css'
-import './normalize.css'
+import cn from './layout.module.scss'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
@@ -31,20 +31,13 @@ export const metadata: Metadata = {
 	}
 }
 
-export const viewport: Viewport = {
-	initialScale: 1,
-	maximumScale: 1,
-	userScalable: false,
-	width: 'device-width'
-}
-
 export default function RootLayout({
 	children
 }: Readonly<{
 	children: ReactNode
 }>) {
 	return (
-		<html lang='en'>
+		<html>
 			<GoogleTagManager gtmId='GTM-KWZ8W5JL' />
 			<link
 				rel='icon'
@@ -58,6 +51,9 @@ export default function RootLayout({
 					<Footer />
 				</Modals>
 			</body>
+			<Suspense fallback={null}>
+				<Metrika />
+			</Suspense>
 		</html>
 	)
 }

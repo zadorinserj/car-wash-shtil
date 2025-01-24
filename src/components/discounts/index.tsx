@@ -8,7 +8,7 @@ import { FC } from 'react'
 import { QuickWrite } from '@/components/quick-write'
 import { Typography } from '@/components/typography'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Discounts: FC = () => {
 	return (
@@ -53,8 +53,8 @@ export const Discounts: FC = () => {
 						tag='p'
 						size='s'
 					>
-						*кешбэк начисляется в филиале на Пушкинской со всех услуг, кроме
-						экспресса без пены, химчистки, полировки
+						*кэшбек начисляется в филиале на Пушкинской со всех услуг с пеной
+						(исключение полировка и химчистка)
 					</Typography>
 				</div>
 				<div className={cn.plate}>

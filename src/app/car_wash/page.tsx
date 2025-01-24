@@ -12,7 +12,7 @@ import { Typography } from '@/components/typography'
 
 import { Pages } from '@/constants/pages'
 
-import cn from '../inner_page.module.css'
+import cn from '../inner_page.module.scss'
 
 export const metadata = {
 	title: 'Автомойка в Ижевске — цены и акции!',
@@ -40,8 +40,8 @@ export default function Services() {
 					url={Pages.CAR_WASH_EUROPEAN}
 				/>
 				<ServiceCard
-					title='Детейлинг мойка'
-					paragraph='с нанесением быстрого кварцевого состава'
+					title='Европейская'
+					paragraph='3-х фазная мойка кузова и дисков'
 					tag='от 1600 ₽'
 					image={carWashServices2Image}
 					mobileImage={carWashServicesMobile2Image}

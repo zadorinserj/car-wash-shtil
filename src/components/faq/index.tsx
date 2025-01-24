@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Typography } from '@/components/typography'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Faq: FC = () => {
 	return (

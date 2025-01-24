@@ -14,7 +14,7 @@ import { Tooltip } from '@/components/tooltip'
 
 import { MENU, Pages } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Header: FC = () => {
 	const [carWashMenuOpen, setCarWashMenuOpen] = useState<boolean>(false)
@@ -27,53 +27,53 @@ export const Header: FC = () => {
 			<div className={clsx(cn.content, 'container')}>
 				<Logo />
 				<nav className={clsx(cn.menu, cn.desktop)}>
-					<Tooltip
-						trigger='hover'
-						placement='bottom-start'
-						offset={[-60, 14]}
-						onToggle={setCarWashMenuOpen}
-						content={
-							<div className={cn.tooltip}>
-								<div className={cn.menuContent}>
-									{MENU.find(({ text }) => text === 'Автомойка').submenu.map(
-										({ text, url }) => (
-											<Link
-												key={text}
-												href={url}
-												className={cn.link}
-											>
-												{text}
-											</Link>
-										)
-									)}
-								</div>
-								<div className={cn.promoImage}>
-									<Image
-										src={menuCarWashImage}
-										alt=''
-										fill={true}
-									/>
-								</div>
-							</div>
-						}
-					>
-						<Link
-							href={Pages.CAR_WASH}
-							className={clsx(
-								cn.link,
-								cn.withIcon,
-								carWashMenuOpen && cn.withIconRotate
-							)}
-						>
-							Автомойка
-							<div className={cn.icon}>
-								<Image
-									src={arrowBottomIcon}
-									alt=''
-								/>
-							</div>
-						</Link>
-					</Tooltip>
+					{/*<Tooltip*/}
+					{/*	trigger='hover'*/}
+					{/*	placement='bottom-start'*/}
+					{/*	offset={[-60, 14]}*/}
+					{/*	onToggle={setCarWashMenuOpen}*/}
+					{/*	content={*/}
+					{/*		<div className={cn.tooltip}>*/}
+					{/*			<div className={cn.menuContent}>*/}
+					{/*				{MENU.find(({ text }) => text === 'Автомойка').submenu.map(*/}
+					{/*					({ text, url }) => (*/}
+					{/*						<Link*/}
+					{/*							key={text}*/}
+					{/*							href={url}*/}
+					{/*							className={cn.link}*/}
+					{/*						>*/}
+					{/*							{text}*/}
+					{/*						</Link>*/}
+					{/*					)*/}
+					{/*				)}*/}
+					{/*			</div>*/}
+					{/*			<div className={cn.promoImage}>*/}
+					{/*				<Image*/}
+					{/*					src={menuCarWashImage}*/}
+					{/*					alt=''*/}
+					{/*					fill={true}*/}
+					{/*				/>*/}
+					{/*			</div>*/}
+					{/*		</div>*/}
+					{/*	}*/}
+					{/*>*/}
+					{/*<Link*/}
+					{/*	href={Pages.CAR_WASH}*/}
+					{/*	className={clsx(*/}
+					{/*		cn.link,*/}
+					{/*		cn.withIcon,*/}
+					{/*		carWashMenuOpen && cn.withIconRotate*/}
+					{/*	)}*/}
+					{/*>*/}
+					{/*	Автомойка*/}
+					{/*	/!*<div className={cn.icon}>*!/*/}
+					{/*	/!*	<Image*!/*/}
+					{/*	/!*		src={arrowBottomIcon}*!/*/}
+					{/*	/!*		alt=''*!/*/}
+					{/*	/!*	/>*!/*/}
+					{/*	/!*</div>*!/*/}
+					{/*</Link>*/}
+					{/*</Tooltip>*/}
 					{/*<Tooltip*/}
 					{/*	trigger='hover'*/}
 					{/*	placement='bottom-start'*/}
@@ -104,12 +104,12 @@ export const Header: FC = () => {
 					{/*		</div>*/}
 					{/*	}*/}
 					{/*>*/}
-					<Link
-						href={Pages.CLEANERS}
-						className={clsx(cn.link)}
-					>
-						Химчистка
-					</Link>
+					{/*<Link*/}
+					{/*	href={Pages.CLEANERS}*/}
+					{/*	className={clsx(cn.link)}*/}
+					{/*>*/}
+					{/*	Химчистка*/}
+					{/*</Link>*/}
 					{/*</Tooltip>*/}
 					{/*<Tooltip*/}
 					{/*	trigger='hover'*/}
@@ -157,18 +157,18 @@ export const Header: FC = () => {
 					{/*		</div>*/}
 					{/*	</div>*/}
 					{/*</Tooltip>*/}
-					<Link
-						href={Pages.POLISHING}
-						className={cn.link}
-					>
-						Полировка
-					</Link>
-					<Link
-						href={Pages.PROTECTION_CERAMICS}
-						className={cn.link}
-					>
-						Керамопокрытие
-					</Link>
+					{/*<Link*/}
+					{/*	href={Pages.POLISHING}*/}
+					{/*	className={cn.link}*/}
+					{/*>*/}
+					{/*	Полировка*/}
+					{/*</Link>*/}
+					{/*<Link*/}
+					{/*	href={Pages.PROTECTION_CERAMICS}*/}
+					{/*	className={cn.link}*/}
+					{/*>*/}
+					{/*	Керамопокрытие*/}
+					{/*</Link>*/}
 					{/*<Link*/}
 					{/*	href={Pages.DETAILING}*/}
 					{/*	className={cn.link}*/}
@@ -189,20 +189,20 @@ export const Header: FC = () => {
 					>
 						+7 (3412) 91-11-19
 					</Link>
-					<Tooltip
-						trigger={false}
-						opened={mobileMenuOpen}
-						placement='bottom-end'
-						popoverClassName={cn.mobileMenuPopover}
-						targetClassName={cn.mobileMenuButton}
-						content={<AdaptiveMenu />}
-						onToggle={visible => setMobileMenuOpen(visible)}
-					>
-						<MenuButton
-							open={mobileMenuOpen}
-							onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-						/>
-					</Tooltip>
+					{/*<Tooltip*/}
+					{/*	trigger={false}*/}
+					{/*	opened={mobileMenuOpen}*/}
+					{/*	placement='bottom-end'*/}
+					{/*	popoverClassName={cn.mobileMenuPopover}*/}
+					{/*	targetClassName={cn.mobileMenuButton}*/}
+					{/*	content={<AdaptiveMenu />}*/}
+					{/*	onToggle={visible => setMobileMenuOpen(visible)}*/}
+					{/*>*/}
+					{/*	<MenuButton*/}
+					{/*		open={mobileMenuOpen}*/}
+					{/*		onClick={() => setMobileMenuOpen(!mobileMenuOpen)}*/}
+					{/*	/>*/}
+					{/*</Tooltip>*/}
 				</div>
 			</div>
 		</header>

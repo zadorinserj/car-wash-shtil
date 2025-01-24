@@ -13,7 +13,7 @@ import { Typography } from '@/components/typography'
 
 import { MENU, Pages } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const Footer: FC = () => {
 	return (
@@ -23,183 +23,184 @@ export const Footer: FC = () => {
 					<div className={cn.logo}>
 						<Logo color='white' />
 						<Button
-							href='https://vk.com/shtil18'
+							href='https://vk.com/izh_shtil'
 							type='main'
 							icon={vkIcon}
 							hoverIcon={arrowTopRightWhiteIcon}
 						/>
 					</div>
-					<div className={cn.menu}>
-						<div className={cn.title}>
-							<Typography
-								tag='h3'
-								size='s'
-							>
-								Услуги
-							</Typography>
-						</div>
-						<div className={cn.services}>
-							<div className={cn.section}>
-								<div className={cn.sectionTitle}>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Автомойка
-									</Typography>
-								</div>
-								{MENU.find(({ text }) => text === 'Автомойка')?.submenu?.map(
-									({ text, url }) => (
-										<Link
-											key={text}
-											className={cn.sectionLink}
-											href={url}
-										>
-											<Typography
-												tag='p'
-												size='s'
-											>
-												{text}
-											</Typography>
-										</Link>
-									)
-								)}
-							</div>
-							<div className={cn.subSection}>
-								{/*<div className={cn.section}>*/}
-								{/*	<div className={cn.sectionTitle}>*/}
-								{/*		<Typography*/}
-								{/*			tag='p'*/}
-								{/*			size='s'*/}
-								{/*		>*/}
-								{/*			Химчистка*/}
-								{/*		</Typography>*/}
-								{/*	</div>*/}
-								{/*	<Link*/}
-								{/*		className={cn.sectionLink}*/}
-								{/*		href={Pages.CLEANERS_CARCASE}*/}
-								{/*	>*/}
-								{/*		<Typography*/}
-								{/*			tag='p'*/}
-								{/*			size='s'*/}
-								{/*		>*/}
-								{/*			Кузов*/}
-								{/*		</Typography>*/}
-								{/*	</Link>*/}
-								{/*	<Link*/}
-								{/*		className={cn.sectionLink}*/}
-								{/*		href={Pages.CLEANERS_SALON}*/}
-								{/*	>*/}
-								{/*		<Typography*/}
-								{/*			tag='p'*/}
-								{/*			size='s'*/}
-								{/*		>*/}
-								{/*			Салон*/}
-								{/*		</Typography>*/}
-								{/*	</Link>*/}
-								{/*</div>*/}
-								<div className={cn.section}>
-									{/*<div className={cn.sectionTitle}>*/}
-									{/*	<Typography*/}
-									{/*		tag='p'*/}
-									{/*		size='s'*/}
-									{/*	>*/}
-									{/*		Полировка*/}
-									{/*	</Typography>*/}
-									{/*</div>*/}
-									<Link
-										className={clsx(cn.sectionTitle, cn.sectionLink)}
-										href={Pages.CLEANERS}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Химчистка
-										</Typography>
-									</Link>
-									<Link
-										className={clsx(cn.sectionTitle, cn.sectionLink)}
-										href={Pages.POLISHING}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Полировка
-										</Typography>
-									</Link>
-									<Link
-										className={clsx(cn.sectionTitle, cn.sectionLink)}
-										href={Pages.PROTECTION_CERAMICS}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Керамопокрытие GYEON
-										</Typography>
-									</Link>
-									<Link
-										className={clsx(cn.sectionTitle, cn.sectionLink)}
-										href={Pages.POLISHING}
-									>
-										<Typography
-											tag='p'
-											size='s'
-										>
-											Твердый воск
-										</Typography>
-									</Link>
-									{/*<Link*/}
-									{/*	className={cn.sectionLink}*/}
-									{/*	href={Pages.PROTECTION_QUARTS}*/}
-									{/*>*/}
-									{/*	<Typography*/}
-									{/*		tag='p'*/}
-									{/*		size='s'*/}
-									{/*	>*/}
-									{/*		Кварц*/}
-									{/*	</Typography>*/}
-									{/*</Link>*/}
-									{/*<Link*/}
-									{/*	className={cn.sectionLink}*/}
-									{/*	href={Pages.PROTECTION_WAX}*/}
-									{/*>*/}
-									{/*	<Typography*/}
-									{/*		tag='p'*/}
-									{/*		size='s'*/}
-									{/*	>*/}
-									{/*		Воск*/}
-									{/*	</Typography>*/}
-									{/*</Link>*/}
-								</div>
-							</div>
-							{/*<div className={cn.section}>*/}
-							{/*	<Link*/}
-							{/*		href='/'*/}
-							{/*		className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
-							{/*	>*/}
-							{/*		<Typography*/}
-							{/*			tag='p'*/}
-							{/*			size='s'*/}
-							{/*		>*/}
-							{/*			Детейлинг*/}
-							{/*		</Typography>*/}
-							{/*	</Link>*/}
-							{/*</div>*/}
-							<div className={cn.section}>
-								<div className={clsx(cn.sectionTitle, cn.disabled)}>
-									<Typography
-										tag='p'
-										size='s'
-									>
-										Бронирование пленкой
-									</Typography>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div className={cn.menu}></div>
+					{/*<div className={cn.menu}>*/}
+					{/*	<div className={cn.title}>*/}
+					{/*		<Typography*/}
+					{/*			tag='h3'*/}
+					{/*			size='s'*/}
+					{/*		>*/}
+					{/*			Услуги*/}
+					{/*		</Typography>*/}
+					{/*	</div>*/}
+					{/*	<div className={cn.services}>*/}
+					{/*		<div className={cn.section}>*/}
+					{/*			<div className={cn.sectionTitle}>*/}
+					{/*				<Typography*/}
+					{/*					tag='p'*/}
+					{/*					size='s'*/}
+					{/*				>*/}
+					{/*					Автомойка*/}
+					{/*				</Typography>*/}
+					{/*			</div>*/}
+					{/*			{MENU.find(({ text }) => text === 'Автомойка')?.submenu?.map(*/}
+					{/*				({ text, url }) => (*/}
+					{/*					<Link*/}
+					{/*						key={text}*/}
+					{/*						className={cn.sectionLink}*/}
+					{/*						href={url}*/}
+					{/*					>*/}
+					{/*						<Typography*/}
+					{/*							tag='p'*/}
+					{/*							size='s'*/}
+					{/*						>*/}
+					{/*							{text}*/}
+					{/*						</Typography>*/}
+					{/*					</Link>*/}
+					{/*				)*/}
+					{/*			)}*/}
+					{/*		</div>*/}
+					{/*		<div className={cn.subSection}>*/}
+					{/*			/!*<div className={cn.section}>*!/*/}
+					{/*			/!*	<div className={cn.sectionTitle}>*!/*/}
+					{/*			/!*		<Typography*!/*/}
+					{/*			/!*			tag='p'*!/*/}
+					{/*			/!*			size='s'*!/*/}
+					{/*			/!*		>*!/*/}
+					{/*			/!*			Химчистка*!/*/}
+					{/*			/!*		</Typography>*!/*/}
+					{/*			/!*	</div>*!/*/}
+					{/*			/!*	<Link*!/*/}
+					{/*			/!*		className={cn.sectionLink}*!/*/}
+					{/*			/!*		href={Pages.CLEANERS_CARCASE}*!/*/}
+					{/*			/!*	>*!/*/}
+					{/*			/!*		<Typography*!/*/}
+					{/*			/!*			tag='p'*!/*/}
+					{/*			/!*			size='s'*!/*/}
+					{/*			/!*		>*!/*/}
+					{/*			/!*			Кузов*!/*/}
+					{/*			/!*		</Typography>*!/*/}
+					{/*			/!*	</Link>*!/*/}
+					{/*			/!*	<Link*!/*/}
+					{/*			/!*		className={cn.sectionLink}*!/*/}
+					{/*			/!*		href={Pages.CLEANERS_SALON}*!/*/}
+					{/*			/!*	>*!/*/}
+					{/*			/!*		<Typography*!/*/}
+					{/*			/!*			tag='p'*!/*/}
+					{/*			/!*			size='s'*!/*/}
+					{/*			/!*		>*!/*/}
+					{/*			/!*			Салон*!/*/}
+					{/*			/!*		</Typography>*!/*/}
+					{/*			/!*	</Link>*!/*/}
+					{/*			/!*</div>*!/*/}
+					{/*			<div className={cn.section}>*/}
+					{/*				/!*<div className={cn.sectionTitle}>*!/*/}
+					{/*				/!*	<Typography*!/*/}
+					{/*				/!*		tag='p'*!/*/}
+					{/*				/!*		size='s'*!/*/}
+					{/*				/!*	>*!/*/}
+					{/*				/!*		Полировка*!/*/}
+					{/*				/!*	</Typography>*!/*/}
+					{/*				/!*</div>*!/*/}
+					{/*				<Link*/}
+					{/*					className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
+					{/*					href={Pages.CLEANERS}*/}
+					{/*				>*/}
+					{/*					<Typography*/}
+					{/*						tag='p'*/}
+					{/*						size='s'*/}
+					{/*					>*/}
+					{/*						Химчистка*/}
+					{/*					</Typography>*/}
+					{/*				</Link>*/}
+					{/*				<Link*/}
+					{/*					className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
+					{/*					href={Pages.POLISHING}*/}
+					{/*				>*/}
+					{/*					<Typography*/}
+					{/*						tag='p'*/}
+					{/*						size='s'*/}
+					{/*					>*/}
+					{/*						Полировка*/}
+					{/*					</Typography>*/}
+					{/*				</Link>*/}
+					{/*				<Link*/}
+					{/*					className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
+					{/*					href={Pages.PROTECTION_CERAMICS}*/}
+					{/*				>*/}
+					{/*					<Typography*/}
+					{/*						tag='p'*/}
+					{/*						size='s'*/}
+					{/*					>*/}
+					{/*						Керамопокрытие GYEON*/}
+					{/*					</Typography>*/}
+					{/*				</Link>*/}
+					{/*				<Link*/}
+					{/*					className={clsx(cn.sectionTitle, cn.sectionLink)}*/}
+					{/*					href={Pages.POLISHING}*/}
+					{/*				>*/}
+					{/*					<Typography*/}
+					{/*						tag='p'*/}
+					{/*						size='s'*/}
+					{/*					>*/}
+					{/*						Твердый воск*/}
+					{/*					</Typography>*/}
+					{/*				</Link>*/}
+					{/*				/!*<Link*!/*/}
+					{/*				/!*	className={cn.sectionLink}*!/*/}
+					{/*				/!*	href={Pages.PROTECTION_QUARTS}*!/*/}
+					{/*				/!*>*!/*/}
+					{/*				/!*	<Typography*!/*/}
+					{/*				/!*		tag='p'*!/*/}
+					{/*				/!*		size='s'*!/*/}
+					{/*				/!*	>*!/*/}
+					{/*				/!*		Кварц*!/*/}
+					{/*				/!*	</Typography>*!/*/}
+					{/*				/!*</Link>*!/*/}
+					{/*				/!*<Link*!/*/}
+					{/*				/!*	className={cn.sectionLink}*!/*/}
+					{/*				/!*	href={Pages.PROTECTION_WAX}*!/*/}
+					{/*				/!*>*!/*/}
+					{/*				/!*	<Typography*!/*/}
+					{/*				/!*		tag='p'*!/*/}
+					{/*				/!*		size='s'*!/*/}
+					{/*				/!*	>*!/*/}
+					{/*				/!*		Воск*!/*/}
+					{/*				/!*	</Typography>*!/*/}
+					{/*				/!*</Link>*!/*/}
+					{/*			</div>*/}
+					{/*		</div>*/}
+					{/*		/!*<div className={cn.section}>*!/*/}
+					{/*		/!*	<Link*!/*/}
+					{/*		/!*		href='/'*!/*/}
+					{/*		/!*		className={clsx(cn.sectionTitle, cn.sectionLink)}*!/*/}
+					{/*		/!*	>*!/*/}
+					{/*		/!*		<Typography*!/*/}
+					{/*		/!*			tag='p'*!/*/}
+					{/*		/!*			size='s'*!/*/}
+					{/*		/!*		>*!/*/}
+					{/*		/!*			Детейлинг*!/*/}
+					{/*		/!*		</Typography>*!/*/}
+					{/*		/!*	</Link>*!/*/}
+					{/*		/!*</div>*!/*/}
+					{/*		<div className={cn.section}>*/}
+					{/*			<div className={clsx(cn.sectionTitle, cn.disabled)}>*/}
+					{/*				<Typography*/}
+					{/*					tag='p'*/}
+					{/*					size='s'*/}
+					{/*				>*/}
+					{/*					Бронирование пленкой*/}
+					{/*				</Typography>*/}
+					{/*			</div>*/}
+					{/*		</div>*/}
+					{/*	</div>*/}
+					{/*</div>*/}
 					<div className={cn.contacts}>
 						<div className={cn.title}>
 							<Typography
@@ -311,7 +312,7 @@ export const Footer: FC = () => {
 							tag='p'
 							size='s'
 						>
-							© 2024
+							© 2025
 						</Typography>
 					</div>
 					<Link

@@ -1,6 +1,6 @@
 import arrowTopRightGreenIcon from '@public/icons/arrow-top-right-green-icon.svg'
 import arrowTopRightIcon from '@public/icons/arrow-top-right-icon.svg'
-import contactsQrImage from '@public/images/contacts-qr.png'
+import quickWriteQrImage from '@public/images/quick-write-qr-image.webp'
 import Image from 'next/image'
 import { FC } from 'react'
 
@@ -9,7 +9,7 @@ import { Typography } from '@/components/typography'
 
 import { ROCKET_WASH_URL } from '@/constants/pages'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const FooterQr: FC = () => {
 	return (
@@ -41,7 +41,7 @@ export const FooterQr: FC = () => {
 			</Button>
 			<div className={cn.qr}>
 				<Image
-					src={contactsQrImage}
+					src={quickWriteQrImage}
 					alt=''
 					fill={true}
 				/>

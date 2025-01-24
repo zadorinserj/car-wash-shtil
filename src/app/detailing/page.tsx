@@ -10,7 +10,7 @@ import { MainBlock } from '@/components/main-block'
 import { Slider } from '@/components/slider'
 import { WhatIsUseful } from '@/components/what-is-useful'
 
-import cn from '../inner_page.module.css'
+import cn from '../inner_page.module.scss'
 
 export const metadata = {
 	title: 'Блеск и защита вашего авто — полировка кузова',

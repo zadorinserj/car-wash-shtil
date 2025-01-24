@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC, ReactNode } from 'react'
 
-import cn from './style.module.css'
+import cn from './style.module.scss'
 
 export const Button: FC<{
 	className?: string

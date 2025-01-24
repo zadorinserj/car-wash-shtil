@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { FC, ReactNode } from 'react'
 
-import cn from './index.module.css'
+import cn from './index.module.scss'
 
 export const BaseModal: FC<{
 	className?: string
