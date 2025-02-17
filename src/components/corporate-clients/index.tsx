@@ -38,7 +38,8 @@ export const CorporateClients: FC = () => {
 					tag='p'
 					size='s'
 				>
-					Оплата производится по факту оказания услуг <br /> в конце месяца
+					Расчеты за оказанные услуги производятся <br />
+					путем внесения предварительной оплаты
 				</Typography>
 				<Button
 					className={cn.action}
